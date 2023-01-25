@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<!--  Last Published: Tue Feb 04 2020 22:45:46 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5e396a4192a3a524aa8600c1" data-wf-site="5e396a4192a3a524468600b8">
+<head>
+  <meta charset="utf-8">
+  <title>Unidade 2</title>
+  <meta content="Unidade 2" property="og:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/components.css" rel="stylesheet" type="text/css">
+  <link href="css/unianchieta.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Oswald:200,300,400,500,600,700","Bitter:400,700,400italic","Merriweather:300,300italic,400,400italic,700,700italic,900,900italic","Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic","Roboto Slab:100,300,regular,700"]  }});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/pg/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/pg/webclip.png" rel="apple-touch-icon">
+  <meta name="author" content="">
+  <meta name="copyright" content="">
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+ tex2jax: {inlineMath: [['\\(','\\)']]},
+ menuSettings:{ zoom: "Hover"}
+});
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+ MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"],
+   bcancel: ["Extension","cancel"],
+   xcancel: ["Extension","cancel"],
+   cancelto: ["Extension","cancel"]
+ });
+});
+</script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>;
+  <script type="text/javascript" charset="utf-8">
+var $z = jQuery.noConflict();
+$z(document).ready(function(){
+$z("#aumentar-fonte").click(function () {
+var size = $z("#content").css('font-size');
+size = size.replace('px', '');
+size = parseInt(size) + 2;
+$z("#content").animate({'font-size' : size + 'px'});
+return false;
+});
+$z("#diminuir-fonte").click(function () {
+var size = $z("#content").css('font-size');
+size = size.replace('px', '');
+size = parseInt(size) - 2;
+$z("#content").animate({'font-size' : size + 'px'});
+return false;
+});
+});
+</script>
+  <style>
+/*cores das titulo-linha no richtext por unidade*/
+.texto-box.w-richtext>h1::before,
+.texto-box.unidade2.w-richtext>h2::before,
+.texto-box.unidade3.w-richtext>h2::before,
+.texto-box.unidade4.w-richtext>h2::before{
+  content:"";
+  display:flex;
+  width: 80px;
+  height: 3px;
+  max-width: 20%;
+  min-height: auto;
+  min-width: 80px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border-radius: 500px;
+  background-image: linear-gradient(45deg, #29a1c9 13%, #2a419a);
+}
+/* estilo padrao das tabelas nos conteudos*/
+table {
+    width: 100%;
+}
+
+table,th,td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+}
+      
+th,td {
+    padding: 14px;
+    text-align: left;
+}
+th{
+    font-size: 1em;
+          
+      }
+      
+td {
+    font-weight: 400; 
+    vertical-align: top;
+    font-size: 0.9em;
+    text-align: justify;
+}
+      
+table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+      
+table tr:nth-child(odd) {
+    background-color: #eeeeee;
+}
+      
+table th {
+    background-color: #2a419a;
+    color: white;
+}
+/* Esconder a tag <br> criada no cabeÃ§alho */
+h1.capa-aula-titulo > br{
+  display:none;
+}
+.texto-box.w-richtext figcaption>a {
+    color:#ffffff !important;
+  }
+      
+      
+        /* ------------------------------*/    
+        /*   NOMES DISCIPLINA/UNIDADES   */
+        /* ------------------------------*/
+      
+      
+  .var-titulo-introducao01::before,
+  .var-titulo-introducao02::before,
+  .var-titulo-introducao03::before,
+  .var-titulo-introducao04::before,
+  .var-disciplina::before {
+  content: "Controladoria";    /* NOME DA DISCIPLINA */
+  }
+  .var-titulo-introducao01::after,
+  .var-unidade01::after {
+  content: "Controladoria";    /* TITULO UNIDADE 1 */
+  } 
+  .var-titulo-introducao02::after,
+  .var-unidade02::after {
+  content: "Organização da Controladoria";
+  } 
+  .var-titulo-introducao03::after,
+  .var-unidade03::after {
+  content: "Funções da Controladoria";
+  } 
+  body { -webkit-print-color-adjust: exact;}
+  @media print {
+    body {
+    padding:0;
+    line-height: 22px;
+    font-size: 18px;
+    }
+    .texto-box.w-richtext p {
+      font-size: 18px !important;
+      line-height: 22px;  
+    }
+    .nav-bar.ghost-nav-bar, .proxima-unidade, .rodape, .seta-topo {
+      display: none;
+    }
+    .section-conteudo, .section-conteudo.color {
+      background: none;
+      background-color: transparent;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    } 
+    .header-capa-aula {
+      min-height: 400px !important;
+      background-image: none !important;
+      background-color: #9e161d !important;
+    }
+    .page-break {
+      page-break-before: always; 
+    }
+    .legenda-imagem {
+     text-align: center; 
+    }
+    /* infograficos _________________________________________ */
+    .infografico-aviso {
+      display: block;
+      page-break-inside: avoid;
+    }
+    .infografico-box {
+     display: none; 
+    }
+     /* elementos de apoio - wrapper _________________________________________ */
+    .box-elemento {
+    	page-break-inside: avoid;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      box-shadow: none !important;
+      background-color: #863e40;
+    }
+    /* elementos de apoio - section ________________________________________ */
+    .icone-caixa {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+}
+@page {
+   margin-top: 2cm;
+   margin-left: 1cm;
+   margin-bottom: 2cm;
+   margin-right: 1cm;
+  }
+</style>
+</head>
+<body class="body">
+  <div class="font-size-ajuste"><a id="aumentar-fonte" href="#" class="btn-font-size w-button">A+</a><a id="diminuir-fonte" href="#" class="btn-font-size w-button">A-</a></div>
+  <div data-collapse="all" data-animation="default" data-duration="450" class="nav-bar ghost-nav-bar w-nav">
+    <div class="navbar-wrapper"><a data-ix="logo" href="index.html" class="logo-link w-nav-brand"><img src="images/pg/unianchieta-logo-drop-shadow.png" height="40" srcset="images/pg/unianchieta-logo-drop-shadow-p-500.png 500w, images/pg/unianchieta-logo-drop-shadow-p-800.png 800w, images/pg/unianchieta-logo-drop-shadow.png 900w" sizes="(max-width: 479px) 57vw, 150px" alt="" class="logo"></a>
+      <div class="titulo-disciplina cor var-disciplina"></div>
+    </div>
+    <div class="w-embed">
+      <?xml version="1.0" encoding="utf-8"?>
+      
+      <!-- LINK DOWNLOAD PDF -->
+      <form action="documents/unidade2.pdf" method="get" target="_blank">
+      <button style="background-color: transparent !important; padding-top: 15px;">
+<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30" height="30" viewbox="0 0 30.1 26.1" style="enable-background:new 0 0 30.1 26.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:transparent;}
+	.st1{fill:#FFFFFF;}
+</style>
+<rect x="0" class="st0" width="30.1" height="26.1"></rect>
+<title>Fazer o download da Unidade 2</title>
+<g>
+	<g id="Camada_1-2">
+		<g id="Camada_1-2-2">
+			<rect x="9.5" class="st1" width="11.2" height="4.1"></rect>
+			<polygon class="st1" points="20.6,5.5 9.5,5.5 9.5,9.2 4.8,9.2 9.9,14.2 15.1,19.2 20.2,14.1 25.3,9.1 20.6,9.1 			">
+			<path class="st1" d="M26.3,17.7c0,3.8-0.6,4.7-4.2,4.7H7.9c-3.7,0-4.2-0.3-4.2-4.7v-1.7H0v4.4c0,3.1,2.5,5.5,5.5,5.5c0,0,0,0,0,0
+				h19c3.1,0,5.5-2.5,5.5-5.5c0,0,0,0,0,0v-4.5h-3.8V17.7z"></path>
+		</polygon></g>
+	</g>
+</g>
+</svg>
+          </button></form></div>
+    <div data-ix="menu-button" class="menu-button white-menu-button w-nav-button">
+      <div class="menu-icon">
+        <div class="menu-line menu-top-line"></div>
+        <div class="menu-line menu-middle-line-1"></div>
+        <div class="menu-line menu-middle-line-2"></div>
+        <div class="menu-line menu-bottom-line"></div>
+      </div>
+    </div>
+    <nav role="navigation" class="full-screen-menu w-nav-menu"><a href="#" data-ix="logo" class="logo-link full-screen-logo w-nav-brand"><img src="images/pg/unianchieta-logo-drop-shadow.png" width="125" srcset="images/pg/unianchieta-logo-drop-shadow-p-500.png 500w, images/pg/unianchieta-logo-drop-shadow-p-800.png 800w, images/pg/unianchieta-logo-drop-shadow.png 900w" sizes="100vw" alt="" class="logo"></a>
+      <div class="full-screen-menu-list">
+        <div class="links-menu w-row">
+          <div class="w-col w-col-4"></div>
+          <div class="w-col w-col-4">
+            <div class="nav-bloco"><a href="index.html" class="titulos-nav-link w-nav-link">Início</a><a href="introducao.html" class="titulos-nav-link w-nav-link">Introdução</a><a href="unidade-1.html" class="titulos-nav-link var-unidade01 w-nav-link w--current"></a><a href="unidade-2.html" class="titulos-nav-link var-unidade02 w-nav-link"></a><a href="unidade-3.html" class="titulos-nav-link var-unidade03 w-nav-link"><a href="questoes-u1.html" class="titulos-nav-link w-nav-link"><strong>Atividades</strong></a><a href="referencias-uia1.html" class="titulos-nav-link w-nav-link"><strong>Referências</strong></a></div>
+          </div>
+          <div class="menu w-col w-col-4">
+            <div class="nav-bloco"></div>
+          </div>
+        </div>
+        <div class="titulo-disciplina-nav var-disciplina"></div>
+      </div>
+    </nav>
+  </div>
+  <div class="header-capa-aula _2">
+    <div class="capa-unidade-container w-container">
+      <div class="capa-unidade-info">
+        <div data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a146" style="opacity:0;-webkit-transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="capa-unidade-numero">Unidade 2</div>
+        <div data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a148" style="-webkit-transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="linha-topo1"></div>
+        <h1 data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a149" style="opacity:0" class="capa-unidade-titulo var-unidade02"><br></h1>
+        <div data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a14b" style="-webkit-transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="linha-topo1"></div>
+      </div>
+    </div><a href="#introducao" class="w-inline-block"><img src="https://uploads-ssl.webflow.com/5b5e20e889ff9ca3a224d3a6/5b5ef9ec2461b3f88a5d28fe_slider-arrow-left-icon.svg" alt="Selecione a seta para iniciar o conteúdo" data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a14c" style="-webkit-transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);-moz-transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);-ms-transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);opacity:0;transform-style:preserve-3d" class="seta-topo"></a></div>
+  <div id="content" class="conteudo-geral">
+    
+     <!-- INICIO INTRODUCAO -->  
+     <section id="introducao" class="section-conteudo color">
+         <div class="container-conteudo w-container">
+             <div class="texto-box w-richtext">
+
+                <h1 data-ix="fade-right">Introdução</h1>
+
+				<p>Antes de iniciar nosso estudo sobre a organização da Controladoria, você, estudante, é capaz de definir quais são as áreas da Controladoria?</p>
+				<p>A Controladoria se apresenta, dentro de uma organização, com objetivos claros de auxiliar a empresa, de apresentar dados sobre a sua movimentação, de avaliar o seu desempenho e de orientar os gestores nas tomadas de decisão.</p>
+				<p>Nesse sentido, a Controladoria se divide em algumas partes, como a gestão empresarial e a gestão financeira, e é sobre essa forma de organização da Controladoria que vamos estudar</p>
+				<p>Além disso, o profissional que executa as funções da controladoria dentro da empresa, o <i>controller</i>, tem algumas atribuições específicas. Vamos analisar cada uma delas nesta unidade.</p>
+				<p>Está preparado(a) para iniciar o estudo sobre a Organização da Controladoria; para conhecer os seus tipos; e para estudar a gestão e a função do controller? Então, vamos iniciar nossa jornada! Nesta unidade, você conhecerá a Organização da Controladoria.</p>
+				<p>Seja bem-vindo(a) e bons estudos!</p>
+
+	
+	
+                 <h2 data-ix="fade-right"> Objetivos específicos de aprendizagem</h2>
+
+					<ul>
+						<li>Conhecer os tipos de controladoria;</li>
+						<li>Estudar a controladoria de gestão;</li>
+						<li>Aprender as funções do <i>controller</i>.</li>
+					</ul>
+
+             </div>
+         </div>
+    </section>
+    <!-- FIM INTRODUCAO -->  
+    
+    <!-- INICIO SEÇÃO 1 -->
+    <section class="section-conteudo">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+			
+                <h1 data-ix="fade-right">1. Organização da Controladoria</h1>
+				
+				<p>A função da Controladoria dentro de uma empresa é bem abrangente e vai depender da necessidade dos sócios, empresários e gestores, mas, basicamente, ela se divide no enfoque da organização estrutural da empresa e nas questões voltadas ao planejamento orçamentário.</p>
+				<p>Além disso, a Controladoria se apresenta de forma interna ou externa dentro da empresa, ou seja, pode ser reservado dentro da instituição um setor específico com profissional qualificado, ou pode ser contratado um profissional de fora da instituição para prestar um serviço específico dentro da empresa.</p>
+				<p>A <b>controladoria interna</b> é geralmente exercida pelo <i>controller</i>, já quando a controladoria é <b>externa</b>, é contratado um profissional independente, podendo ser um auditor, ou contador, cujas atribuições serão realizar planejamentos específicos das áreas solicitadas.</p>
+
+                <!-- INICIO FIGURA 1 -->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img2-1.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Fluxograma - Controladoria e divisões<br>Fonte: Elaborada pelo autor (2021). </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>Fluxograma apresentando as divisões da Controladoria. No topo, um retângulo em que está escrito “Controladoria”. Abaixo, à esquerda, um retângulo com o texto “interna”; abaixo desse, outro retângulo, no qual está escrito “<i>controller</i>”. Ainda abaixo de Controladoria, agora à direita, um retângulo com o texto “externa”; abaixo desse, outro retângulo, no qual está escrito “profissional autônomo”</div>
+                </div>
+                <!-- FIM FIGURA 1 -->
+
+				<p>De acordo com Pereira e Farias (2017), a Controladoria muitas vezes é vista como uma área voltada para a fiscalização; no entanto, sua principal função é a de assessoramento.</p>
+
+				<!-- início popup SAIBA MAIS / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+                <div class="popup saibamais square" data-ix="fade-up-1" onclick="myFunction1()" >Saiba Mais
+                    <span class="popuptext saibamais text" id="myPopup1">
+                    <h3>Saiba Mais</h3>
+                    <p>O Conselho Regional de Contabilidade do Ceará disponibilizou um artigo relacionado a Controladoria para microempresas. Basta acessar o link:<br><a href="https://www.crc-ce.org.br/crcnovo/files/CursoCRC_Controladoria_MsMarcosBarbosa_v20161.pdf" target="_blank"> https://www.crc-ce.org.br/crcnovo/files/CursoCRC_Controladoria_MsMarcosBarbosa_v20161.pdf</a></p>
+                    </span>
+                </div>
+                <!-- fim popup SAIBA MAIS -->
+
+				<p>Além disso, a Controladoria pode ser pública ou privada, a privada é aquela relacionada as empresas, as quais já estudamos, no entanto, a Controladoria Pública é realizada por órgãos públicos como Prefeituras, Câmeras Municipais, Governo do Estado, e auxiliam os gestores no processo de controle dos gastos públicos.</p>
+
+				<!-- INICIO FIGURA 2 -->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img2-2.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Controladoria<br>Fonte: Plataforma Deduca (2021). </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>Imagem representa quatro pessoas sentadas enfileiradas com um computador.</div>
+                </div>
+                <!-- FIM FIGURA 2 -->
+	
+				<p>Agora que já conhecemos um pouco sobre como a Controladoria se apresenta, vamos aprender sobre a sua classificação. Para isso, basta continuar a leitura!</p>
+			
+				<h2 data-ix="fade-right"> 1.1 Classificação da Controladoria</h2>
+				
+				<p>A Controladoria pode ser classificada de acordo com a área em que está atuando dentro da empresa, e de acordo com o atendimento das necessidades solicitadas pelos gestores.</p>
+				<p>Entre as áreas de atuação da Controladoria, temos área contábil, gerencial estratégica, custos, tributária, proteção e controle dos ativos, controle interno, controle de riscos e gestão de informação.</p>
+				<p>Cada área terá uma função e atribuição específica, e vai necessitar de um profissional qualificado para atender ao que está sendo solicitado, desse modo, nem sempre o profissional contratado para atuar na área de custos terá experiência para atuar na área tributária, por isso, antes de se contratar um profissional, deve ser levado em consideração quais dessas áreas deverão ser controladas e planejadas.</p>
+
+                <!-- INICIO FIGURA 3 -->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img2-3.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Conceito de Controladoria<br>Fonte: Elaborada pelo autor (2021). </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>Fluxograma de áreas da Controladoria. No topo, um retângulo em que está escrito “Controladoria”. Abaixo, no segundo nível, cinco retângulos com os textos “contábil”; “gerencial”; “custos”; “tributária”; e “proteção e controle”. Abaixo desses cinco retângulos, no terceiro nível, há outros três retângulos. Da esquerda para a direita, no primeiro está escrito “Controle interno” e ele se conecta aos retângulos “contábil” e “gerencial” logo acima. Ao centro, ainda no terceiro nível, o texto do retângulo diz “Controle de riscos” e este se conecta a “custos” e “tributária” logo acima. Por fim, à direita, no terceiro nível, há um retângulo com o texto “Gestão de informação”, o qual está conectado a “tributária” e a “proteção e controle”, do nível acima.</div>
+                </div>
+                <!-- FIM FIGURA 3 -->
+
+				<p>Para podermos entender mais sobre as áreas de atuação da Controladoria, vamos analisar detalhadamente cada uma delas. Inicialmente, vamos estudar sobre a Controladoria voltada para a <b>área contábil</b>. Nesse ramo de atuação, o profissional deverá realizar procedimentos voltados à atividade financeira da empresa.</p>
+				<p>Além disso, o profissional deve gerenciar as atividades do setor contábil, analisar as demonstrações e relatórios financeiros, além de buscar realizar procedimentos que gerem o desenvolvimento de políticas relacionadas às práticas contábeis e de controle.</p>
+
+				<!-- início popup REFLETIR / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+                <div class="popup reflita square" data-ix="fade-up-1" onclick="myFunction2()" >Reflita
+                    <span class="popuptext reflita text" id="myPopup2">
+                    <h3>Reflita</h3>
+                    <p>Você estudante, é capaz de descrever as atribuições de um profissional que atua na área de Controladoria Contábil?</p>
+                    </span>
+                </div>
+                <!-- fim popup REFLETIR -->
+	
+				<p>A Controladoria voltada à área de atuação de <b>gerenciamento estratégico</b> é aquela, segundo Pereira (2016), em que é realizado o planejamento com o objetivo de continuidade das empresas.</p>
+				<p>Ainda de acordo com essa área de atuação, o profissional deverá prover informações relacionadas a aspectos financeiros e não financeiros, além de buscar estratégias para a organização, bem como relatórios contendo feedbacks, sobre o desempenho das operações realizadas.</p>
+
+				<!-- INICIO FIGURA 4 -->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img2-4.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Controladoria Gerencial Estratégica<br>Fonte: Plataforma Deduca (2021). </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>Imagem representa uma mulher com uma caneta no centro de alguns círculos concêntricos</div>
+                </div>
+                <!-- FIM FIGURA 4 -->
+	
+				<p>Uma outra área de atuação da Controladoria é a relacionada aos <b>custos</b>. Nesse ramo, o profissional deverá montar estratégias com o objetivo de mensurar os custos, bem como analisar as formas de redução, além de viabilizar lançamentos dos produtos, clientes, linhas de negócios etc.</p>
+				<p>Além dessas áreas, o profissional controlador pode trabalhar diretamente com aspectos <b>tributários</b> da empresa, ou seja, nesse ramo de atuação o profissional irá desenvolver, junto a Contabilidade, estratégias para atendimento das obrigações tributárias, buscando maneiras de realizar a elisão fiscal de forma que a empresa passe a pagar menos tributos, sem ir de encontro aos aspectos legais tributários. Além disso, essa área tributária é responsável por métodos de registro e apuração, e um eficiente sistema de planejamento tributário.</p>
+
+	
+				<!-- início popup SAIBA MAIS / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+                <div class="popup saibamais square" data-ix="fade-up-1" onclick="myFunction3()" >Saiba Mais
+                    <span class="popuptext saibamais text" id="myPopup3">
+                    <h3>Saiba Mais</h3>
+                    <p>O CRC do Pará disponibilizou um artigo intitulado “Quais os limites do planejamento tributário?” que trata sobre os aspectos do planejamento tributário dentro de uma empresa. Basta acessar o link:<br><a href="https://crcpa.org.br/paginas/noticias/quais-os-limites-do-planejamento-tributario" target="_blank"> https://crcpa.org.br/paginas/noticias/quais-os-limites-do-planejamento-tributario</a></p>
+                    </span>
+                </div>
+                <!-- fim popup SAIBA MAIS -->
+	
+				<p>A área de atuação relacionada à <b>proteção e controle</b> dos ativos é um ramo que visa detalhar para os gestores o tipo de ativo que existe na instituição, demonstrando os aspectos sobre a proteção dos ativos, como a contratação de seguros. Além disso, o profissional atuante nessa área deverá proceder ao controle e registro de todos os ativos, tangíveis ou intangíveis, da organização.</p>
+	
+				<!-- INICIO FIGURA 5 -->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img2-5.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Proteção e Controle dos ativos<br>Fonte: Elaborada pelo autor (2021). </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>Fluxograma da área de Controle dos ativos. No topo, um retângulo em que está escrito “Controladoria”. Ao lado deste, um retângulo com o texto “ativos”. Abaixo, no segundo nível, dois retângulos, cujos textos são “Tangíveis” e “Intangíveis”. Por fim, no terceiro nível, um retângulo com o texto “Seguro”.</div>
+                </div>
+                <!-- FIM FIGURA 5 -->
+	
+				<p>A outra área da Controladoria é aquela voltada aos aspectos relacionados ao <b>controle interno</b> da instituição. Nesse campo de atuação, o profissional deverá estabelecer normativas de controle do patrimônio da empresa, além de medidas de guardar os interesses da empresa.</p>
+				<p>Na área de atuação relacionada ao <b>controle de riscos</b>, o profissional deve avaliar o mercado externo, verificar as possibilidades de riscos para a empresa, como os níveis de inflação, mercado exterior, e outros fatores que interfiram direta ou indiretamente no funcionamento e bem-estar da instituição.</p>
+				<p>Por fim, temos a área relacionada aos aspectos da <b>gestão de informação</b>. Nesse ramo, o profissional deverá trabalhar voltado a garantir um sistema de informação fluido e de fácil acesso a todos os envolvidos na empresa.</p>
+				<p>Além disso, a área de gestão de informação é responsável por fornecer um sistema ágil de informações voltadas às demais áreas da empresa; no entanto, esse ramo se diferencia da gestão da tecnologia da informação, já que este é direcionado a softwares de controle.</p>
+
+				<!-- INICIO FIGURA 6 -->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img2-6.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Controladoria Gestão da Informação<br>Fonte: Plataforma Deduca (2021). </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>Ilustração de gráfico em forma de pizza</div>
+                </div>
+                <!-- FIM FIGURA 6 -->
+	
+				<p>Como podemos observar, as áreas de atuação de um profissional controlador são bastante variadas: podem ir desde a avaliação do seguro dos ativos até a gestão da informação estrutural da empresa. Por isso, tanto o profissional quanto os empresários e gestores da empresa, antes de iniciar a contratação, devem avaliar quais são as necessidades da empresa e qual área de atuação deverá ser analisada.</p>
+				<p>Agora que já sabemos sobre as várias áreas de atuação da Controladoria, vamos estudar sobre a Controladoria direcionada à Gestão empresarial, além de entender e conhecer os principais aspectos de gestão desse campo de atuação. É só continuar os estudos no próximo item.</p>
+
+				<h2 data-ix="fade-right">1.2 Controladoria de gestão Empresarial</h2>
+			
+				<p>A Controladoria voltada à gestão empresarial é aquela que envolve várias áreas de atuação do profissional, além de estar relacionada mais diretamente aos aspectos do planejamento estratégico, tático e operacional.</p>
+				<p>Após o planejamento, o profissional deve seguir alguns outros critérios como o controle, a disponibilidade das informações e o auxílio ao setor da contabilidade.</p>
+
+				<!-- INICIO SANFONA SEM IMAGEM -->
+					<div class="bg-infografico-un1 w-container">
+                        <p class="introinfografico"></p>
+						<div class="div-block-15">
+						
+							<div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Controle:</button>
+								<div class="infoinfo">
+									<p class="paragraph-5">Desenvolvimento e revisão dos sistemas relacionados ao desempenho da empresa, voltados à medição dos resultados.</p>
+								</div>
+							</div>
+							
+							<div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Informação:</button>
+								<div class="infoinfo">
+									<p class="paragraph-5">Preparação, análise e interpretação das demonstrações financeiras, auxiliando os gestores, além de medidas de atendimento dos órgãos fiscais.</p>
+								</div>
+							</div>
+							
+							<div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Contabilidade:</button>
+								<div class="infoinfo">
+									<p class="paragraph-5">Manutenção da forma de controle dos relatórios contábeis, acompanhamento dos lançamentos e contas.</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+                <!-- FIM SANFONA SEM IMAGEM -->
+
+				<p>Dentro do aspecto da contabilidade, o profissional direcionado à gestão empresarial deverá acompanhar o pagamento dos tributos de competência do estado, da União e dos municípios, além de relacionar-se de forma proativa com os órgãos públicos, disponibilizando e viabilizando o atendimento de todas as exigências legais.</p>
+				<p>Além disso, deve manter contato direto com os auditores internos e externos e apoio à área da tesouraria da empresa, sobre as normas e procedimentos utilizados em todos os processamentos das informações.</p>
+				<p>Como podemos observar, o profissional atuante na área de controladoria não pode executar suas atividades de forma isolada, mas sim, deverá ser parte de um todo em prol do desenvolvimento e gestão empresarial.</p>
+				<p>Além disso, o profissional deverá ser um mediador das informações dos setores com os gestores, sendo também um interlocutor dos funcionários e clientes, a fim de desenvolver estratégias de planejamento que atendam ao interesse coletivo, buscando a melhoria das práticas empresarias, e consequentemente garantindo, para os gestores, resultados financeiros positivos.</p>
+
+				<!-- INICIO FIGURA 7 -->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img2-7.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Controladoria de gestão empresarial<br>Fonte: Elaborada pelo autor (2021). </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>Fluxograma da área de Controladoria de gestão empresarial. No topo, um retângulo em que está escrito “Controladoria”. Abaixo, no segundo nível, quatro retângulos, cujos textos, da esquerda para a direita, são: Planejamento, Controle, Informação e Contabilidade.</div>
+                </div>
+                <!-- FIM FIGURA 7 -->
+
+				<p>É importante destacar que as áreas definidas estão interligadas, e que todas devem estar de acordo com a missão, a visão e os objetivos preestabelecidos no início do processo de criação da empresa.</p>
+
+				<!-- início popup REFLETIR / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+                <div class="popup reflita square" data-ix="fade-up-1" onclick="myFunction4()" >Reflita
+                    <span class="popuptext reflita text" id="myPopup4">
+                    <h3>Reflita</h3>
+                    <p>Você, estudante, é capaz de realizar um esboço relacionando as áreas de atuação da Controladoria de Gestão Empresarial?</p>
+                    </span>
+                </div>
+                <!-- fim popup REFLETIR -->
+				
+				<p>Outro ponto a ser relacionado pelo controlador de gestão é aquele direcionado ao planejamento que a empresa vai realizar. Ou seja, se o momento é para definição do planejamento estratégico, do tático ou do operacional.</p>
+				<p>O <b>planejamento estratégico</b> é aquele no qual o profissional vai avaliar os aspectos de longo prazo para a empresa, geralmente é o primeiro passo para a elaboração das metas e objetivos, pois visa garantir a abrangência de dinâmicas do funcionamento da empresa.</p>
+				<p>O <b>planejamento tático</b> é aquele no qual o profissional, juntamente com os gerentes estabelecerão as ações para a execução das tarefas, é um planejamento direcionado para médio prazo.</p>
+				<p>O <b>planejamento operacional</b> é aquele utilizado para a ação final, ou seja, é onde a operação de fato vai ocorrer. É um planejamento de curto prazo, direcionado para os funcionários e agentes de execução final.</p>
+				<p>Diante dos aspectos definidos nos tipos de planejamento, o controlador deverá traçar os objetivos da empresa, atrelados com todos os aspectos envolvendo as diversas áreas da empresa.</p>
+				<p>Agora que já conhecemos sobre a Controladoria de gestão empresarial, vamos entender sobre o papel do profissional <i>controller</i> dentro da instituição financeira.</p>
+
+				<h2 data-ix="fade-right">1.3 O <i>Controller</i></h2>
+				
+				<p>A palavra <i>controller</i> significa controlador ou fiscal, e, se formos analisar apenas a sua definição, já podemos entender a função e a atribuição desse profissional. No entanto, o cotidiano de um <i>controller</i> é mais abrangente e está relacionado com gestão, divulgação de informação e intermediação de estratégias.</p>
+				<p>O profissional <i>controller</i>, de acordo com Pereira e Farias (2017), deixou de ser apenas o contador com obrigações operacionais padronizadas. Ele passou a ser um profissional atrelado ao apoio estratégico. No entanto, são necessárias algumas qualificações, como bom relacionamento interpessoal com a equipe de trabalho, gerenciamento de equipe e conhecimento contábil abrangente</p>
+
+				<!-- INICIO FIGURA 8 -->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img2-8.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right"><i>Controller</i><br>Fonte: Plataforma Deduca (2021). </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>Ilustração de uma mulher com a mão aberta.</div>
+                </div>
+                <!-- FIM FIGURA 8 -->
+				
+				<p>Além dessas qualificações, são necessários pré-requisitos para que o profissional possa ter sucesso nessa profissão e, Segundo Pereira (2016), somente a graduação não é suficiente, mesmo que tenha sido realizada em uma renomada instituição de ensino.</p>
+				
+				<!-- INICIO SANFONA SEM IMAGEM -->
+					<div class="bg-infografico-un1 w-container">
+                        <p class="introinfografico"></p>
+						<div class="div-block-15">
+						
+							<div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Competências do <i>Controller</i>:</button>
+								<div class="infoinfo">
+									<p class="paragraph-5">Fluência em inglês e espanhol; manuseio de ferramentas tecnológicas; conhecimentos não técnicos; atitudes éticas; bom nível cultural.</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+                <!-- FIM SANFONA SEM IMAGEM -->
+				
+				<p>O profissional, antes de iniciar as atividades dentro de uma empresa, deverá ter as aptidões necessárias; além disso, após começar a realizar suas atividades dentro da instituição deve sempre buscar se atualizar, estudar sobre as novas regras de legislação e se capacitar dentro e fora do ambiente de trabalho.</p>
+				
+				<!-- início popup SAIBA MAIS / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+                <div class="popup saibamais square" data-ix="fade-up-1" onclick="myFunction5()" >Saiba Mais
+                    <span class="popuptext saibamais text" id="myPopup5">
+                    <h3>Saiba Mais</h3>
+                    <p>O CFC emitiu a Legislação da Profissão Contábil que trata sobre todos os aspectos da profissão do contador, <i>controller</i>. Confira em:<br><a href="https://cfc.org.br/wp-content/uploads/2015/12/legis_profcontabil.pdf" target="_blank"> https://cfc.org.br/wp-content/uploads/2015/12/legis_profcontabil.pdf</a></p>
+                    </span>
+                </div>
+                <!-- fim popup SAIBA MAIS -->	
+				
+				<p>Por fim, podemos destacar que o controller é um profissional muito importante para o desenvolvimento da instituição financeira, e deverá sempre buscar estar atento ao que a legislação determina e sobre as inovações previstas</p>
+	 
+			</div>
+		</div>
+	</section>	
+     
+     <!-- INICIO CONSIDERAÇÕES FINAIS -->
+    <section class="section-conteudo color">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+                
+				<h1 data-ix="fade-right">Considerações Finais</h1>
+                
+                <p>A Controladoria é uma área que auxilia a empresa em vários aspectos como análise de custos, gerencial, tributário, prestação de controle de ativo, de controle interno e de controle de riscos.</p>
+				<p>Cada área é determinada para um tipo de necessidade da empresa, e deverão ser estabelecidas metas e estratégias para cada fase do planejamento, seja estratégico, operacional ou tático.</p>
+				<p>Diante desse cenário, o profissional deverá ter aptidões diversas, para preenchimento das funções da Controladoria, e conhecimento em várias áreas como a Contabilidade, Administração, Marketing, entre outros.</p>
+				<p>Em síntese, nesta unidade, vimos que a Controladoria pode ser dividida em interna e externa, e em pública e privada.</p>
+				<p>A Controladoria voltada à gestão empresarial é aquela que abrange as várias áreas de atuação, e deve estar alinhada com a missão, o valor e os objetivos da empresa, além de auxiliar os gestores na elaboração e desenvolvimento dos planejamentos.</p>
+				<p>O profissional <i>controller</i> é aquele que realiza a função do controlador dentro da empresa, e deve ter uma relação interpessoal com todos os funcionários, para poder montar as estratégias de forma independente. Além disso, o profissional deve estar sempre se atualizando e se qualificando.</p>
+				
+            </div>
+        </div>
+    </section>
+    <!-- FIM CONSIDERAÇÕES FINAIS -->
+
+
+            <!-- INICIO VIDEO DE RESUMO -->
+          
+    <section class="section-conteudo">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+                
+                <h1  data-ix="fade-right">Resumo da Unidade</h1>
+                
+                <p>Agora que você concluiu a leitura do conteúdo. assista a seguir a videoaula com o resumo da unidade:</p>
+                
+                <!-- INICIO VIDEO VIMEO -->
+                <div style="padding-top:56.27659574468085%" id="w-node-a02e1f5e1ea1-7b8600bf" class="w-video w-embed" data-ix="fade-left"><iframe class="embedly-embed" src="https://player.vimeo.com/video/551478728/" scrolling="no" title="Vimeo embed" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe></div>
+                <!-- FIM VIDEO VIMEO -->
+
+            </div>
+        </div>
+    </section>
+    
+   <!-- INICIO ATIVIDADES UNIDADE 2 -->
+    <section class="section-conteudo color2">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+			
+                <h1 data-ix="fade-right">Atividades Unidade II</h1>
+
+                <!-- Atividade 1 -->
+                <div class="questao-enunciado">
+                    <div class="questao-enunciado-texto w-richtext">
+					
+                        <h2 data-ix="fade-right" class="atividade">Atividade 1</h2>
+                        <p>A Controladoria é bem abrangente e pode estar relacionada com várias áreas de atuação dentro de uma instituição financeira. A controladoria voltada para o planejamento de estratégias que auxiliem na continuidade da empresa e que apresenta informações financeiras e não financeiras é a Controladoria relacionada a que área?</p>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>a)Contábil</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as áreas contábil, de custos, controle de riscos e tributária não estão diretamente relacionadas à Controladoria de estratégia e de planejamento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box correta">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>b) Gerenciamento Estratégico </p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Correta:</strong> A alternativa marcada está correta porque a área de gerenciamento estratégico da Controladoria é aquela que apresenta estratégias ligadas aos setores financeiro e não financeiro da empresa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>c) Custos</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as áreas contábil, de custos, controle de riscos e tributária não estão diretamente relacionadas à Controladoria de estratégia e de planejamento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>d) Controle de Riscos</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as áreas contábil, de custos, controle de riscos e tributária não estão diretamente relacionadas à Controladoria de estratégia e de planejamento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>e) Tributária</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as áreas contábil, de custos, controle de riscos e tributária não estão diretamente relacionadas à Controladoria de estratégia e de planejamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Atividade 2 -->
+            <div class="texto-box w-richtext">
+                <div class="questao-enunciado">
+                    <div class="questao-enunciado-texto w-richtext">
+					
+                        <h2 data-ix="fade-right" class="atividade">Atividade 2</h2>
+                        <p>A atuação da Controladoria dentro de uma empresa vai depender, em especial, da necessidade que os gestores e coordenadores têm. Qual é a área da Controladoria voltada ao pagamento dos impostos e ao planejamento de estratégias de elisão de impostos?</p>
+
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>a)    Contábil</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as áreas contábil, custos, controle de riscos e controle interno não estão relacionadas, diretamente, com o pagamento dos impostos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>b)   Custos</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as áreas contábil, custos, controle de riscos e controle interno não estão relacionadas, diretamente, com o pagamento dos impostos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>c)   Controle de Riscos</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as áreas contábil, custos, controle de riscos e controle interno não estão relacionadas, diretamente, com o pagamento dos impostos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box correta">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>d) Tributária</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Correta:</strong> A altenativa marcada está correta porque planejamento tributário, conhecimento das legislações fiscais relacionadas ao ramo de atividade da empresa e atualização das alíquotas dos tributos pertencem à controladoria tributária.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>e)   Controle Interno</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as áreas contábil, custos, controle de riscos e controle interno não estão relacionadas, diretamente, com o pagamento dos impostos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                            <!-- Atividade 3 -->
+            <div class="texto-box w-richtext">
+                <div class="questao-enunciado">
+                    <div class="questao-enunciado-texto w-richtext">
+					
+                        <h2 data-ix="fade-right" class="atividade">Atividade 3</h2>
+                        <p>A Controladoria contém muitas áreas de atuação para o profissional. Por isso, ao se candidatar a uma vaga, o profissional deverá estar qualificado e dotado de algumas aptidões específicas, como o domínio das tecnologias e outros idiomas. Qual outra característica é importante para esse profissional?</p>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box correta">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>a)  Atitudes éticas.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Correta:</strong> A alternativa marcada está correta porque o <i>controller</i> deve ter atitudes éticas dentro do estabelecimento empresarial.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>b)   Tratar os funcionários com apreço ou desapreço.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque o <i>controller</i> deve tratar os funcionários de forma igualitária e conhecer todos os setores da empresa. Além disso, não é sua função protocolar e arquivar documentos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>c)   Não conhecer todos os setores da empresa, apenas a contabilidade.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque o <i>controller</i> deve tratar os funcionários de forma igualitária e conhecer todos os setores da empresa. Além disso, não é sua função protocolar e arquivar documentos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>d)   Atender telefonemas e protocolar documentos.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque o <i>controller</i> deve tratar os funcionários de forma igualitária e conhecer todos os setores da empresa. Além disso, não é sua função protocolar e arquivar documentos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>e)   Arquivar documentos.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque o <i>controller</i> deve tratar os funcionários de forma igualitária e conhecer todos os setores da empresa. Além disso, não é sua função protocolar e arquivar documentos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FIM ATIVIDADES UNIDADE 2 -->
+    
+  </div>
+  
+  <div class="proxima-unidade">
+    <div class="container-rodape w-container">
+      <div class="linha-topo1"></div>
+      <p class="secao-titulo-rodape">Unidade Concluída</p>
+      <p class="secao-descricao">Selecione o botão &quot;Avançar&quot; para continuar.</p><a href="unidade-3.html" class="botao-home avancar w-button">Avançar</a></div>
+  </div>
+  
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/unianchieta.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script>
+      $('.questao-alternativa-box').click(function() {
+          $(this).toggleClass('on');
+          $($(this).find('.questao-feedback')).toggleClass('on');
+          $('.questao-alternativa-box').removeClass('on');
+          $('.questao-feedback').removeClass('on');
+          $($(this).find('.questao-feedback')).addClass('on');
+          $(this).addClass('on');
+      });
+  </script>
+  <script>
+      // When the user clicks on div, open the popup
+      function myFunction1() {var popup = document.getElementById("myPopup1"); popup.classList.toggle("show");}
+      function myFunction2() {var popup = document.getElementById("myPopup2"); popup.classList.toggle("show");}
+      function myFunction3() {var popup = document.getElementById("myPopup3"); popup.classList.toggle("show");}
+      function myFunction4() {var popup = document.getElementById("myPopup4"); popup.classList.toggle("show");}
+      function myFunction5() {var popup = document.getElementById("myPopup5"); popup.classList.toggle("show");}
+      function myFunction6() {var popup = document.getElementById("myPopup6"); popup.classList.toggle("show");}
+      function myFunction7() {var popup = document.getElementById("myPopup7"); popup.classList.toggle("show");}
+      function myFunction8() {var popup = document.getElementById("myPopup8"); popup.classList.toggle("show");}
+      function myFunction9() {var popup = document.getElementById("myPopup9"); popup.classList.toggle("show");}
+      function myFunction10() {var popup = document.getElementById("myPopup10"); popup.classList.toggle("show");}
+      function myFunction11() {var popup = document.getElementById("myPopup11"); popup.classList.toggle("show");}
+      function myFunction12() {var popup = document.getElementById("myPopup12"); popup.classList.toggle("show");}
+      function myFunction13() {var popup = document.getElementById("myPopup13"); popup.classList.toggle("show");}
+      function myFunction14() {var popup = document.getElementById("myPopup14"); popup.classList.toggle("show");}
+      function myFunction15() {var popup = document.getElementById("myPopup15"); popup.classList.toggle("show");}
+      function myFunction16() {var popup = document.getElementById("myPopup16"); popup.classList.toggle("show");}
+  </script>
+</body>
+</html>

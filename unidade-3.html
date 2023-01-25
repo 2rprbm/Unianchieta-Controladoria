@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<!--  Last Published: Tue Feb 04 2020 22:45:46 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5e396a4192a3a524aa8600c1" data-wf-site="5e396a4192a3a524468600b8">
+<head>
+  <meta charset="utf-8">
+  <title>Unidade 3</title>
+  <meta content="Unidade 3" property="og:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/components.css" rel="stylesheet" type="text/css">
+  <link href="css/unianchieta.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Oswald:200,300,400,500,600,700","Bitter:400,700,400italic","Merriweather:300,300italic,400,400italic,700,700italic,900,900italic","Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic","Roboto Slab:100,300,regular,700"]  }});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/pg/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/pg/webclip.png" rel="apple-touch-icon">
+  <meta name="author" content="">
+  <meta name="copyright" content="">
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+ tex2jax: {inlineMath: [['\\(','\\)']]},
+ menuSettings:{ zoom: "Hover"}
+});
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+ MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"],
+   bcancel: ["Extension","cancel"],
+   xcancel: ["Extension","cancel"],
+   cancelto: ["Extension","cancel"]
+ });
+});
+</script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>;
+  <script type="text/javascript" charset="utf-8">
+var $z = jQuery.noConflict();
+$z(document).ready(function(){
+$z("#aumentar-fonte").click(function () {
+var size = $z("#content").css('font-size');
+size = size.replace('px', '');
+size = parseInt(size) + 2;
+$z("#content").animate({'font-size' : size + 'px'});
+return false;
+});
+$z("#diminuir-fonte").click(function () {
+var size = $z("#content").css('font-size');
+size = size.replace('px', '');
+size = parseInt(size) - 2;
+$z("#content").animate({'font-size' : size + 'px'});
+return false;
+});
+});
+</script>
+  <style>
+/*cores das titulo-linha no richtext por unidade*/
+.texto-box.w-richtext>h1::before,
+.texto-box.unidade2.w-richtext>h2::before,
+.texto-box.unidade3.w-richtext>h2::before,
+.texto-box.unidade4.w-richtext>h2::before{
+  content:"";
+  display:flex;
+  width: 80px;
+  height: 3px;
+  max-width: 20%;
+  min-height: auto;
+  min-width: 80px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border-radius: 500px;
+  background-image: linear-gradient(45deg, #29a1c9 13%, #2a419a);
+}
+/* estilo padrao das tabelas nos conteudos*/
+table {
+    width: 100%;
+}
+
+table,th,td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+}
+      
+th,td {
+    padding: 14px;
+    text-align: left;
+}
+th{
+    font-size: 1em;
+          
+      }
+      
+td {
+    font-weight: 400; 
+    vertical-align: top;
+    font-size: 0.9em;
+    text-align: justify;
+}
+      
+table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+      
+table tr:nth-child(odd) {
+    background-color: #eeeeee;
+}
+      
+table th {
+    background-color: #2a419a;
+    color: white;
+}
+/* Esconder a tag <br> criada no cabeÃ§alho */
+h1.capa-aula-titulo > br{
+  display:none;
+}
+.texto-box.w-richtext figcaption>a {
+    color:#ffffff !important;
+  }
+      
+      
+        /* ------------------------------*/    
+        /*   NOMES DISCIPLINA/UNIDADES   */
+        /* ------------------------------*/
+      
+      
+  .var-titulo-introducao01::before,
+  .var-titulo-introducao02::before,
+  .var-titulo-introducao03::before,
+  .var-titulo-introducao04::before,
+  .var-disciplina::before {
+  content: "Controladoria";    /* NOME DA DISCIPLINA */
+  }
+  .var-titulo-introducao01::after,
+  .var-unidade01::after {
+  content: "Controladoria";    /* TITULO UNIDADE 1 */
+  } 
+  .var-titulo-introducao02::after,
+  .var-unidade02::after {
+    content: "Organização da Controladoria";
+  } 
+  .var-titulo-introducao03::after,
+  .var-unidade03::after {
+    content: "Funções da Controladoria";
+  } 
+  body { -webkit-print-color-adjust: exact;}
+  @media print {
+    body {
+    padding:0;
+    line-height: 22px;
+    font-size: 18px;
+    }
+    .texto-box.w-richtext p {
+      font-size: 18px !important;
+      line-height: 22px;  
+    }
+    .nav-bar.ghost-nav-bar, .proxima-unidade, .rodape, .seta-topo {
+      display: none;
+    }
+    .section-conteudo, .section-conteudo.color {
+      background: none;
+      background-color: transparent;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    } 
+    .header-capa-aula {
+      min-height: 400px !important;
+      background-image: none !important;
+      background-color: #9e161d !important;
+    }
+    .page-break {
+      page-break-before: always; 
+    }
+    .legenda-imagem {
+     text-align: center; 
+    }
+    /* infograficos _________________________________________ */
+    .infografico-aviso {
+      display: block;
+      page-break-inside: avoid;
+    }
+    .infografico-box {
+     display: none; 
+    }
+     /* elementos de apoio - wrapper _________________________________________ */
+    .box-elemento {
+    	page-break-inside: avoid;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      box-shadow: none !important;
+      background-color: #863e40;
+    }
+    /* elementos de apoio - section ________________________________________ */
+    .icone-caixa {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+}
+@page {
+   margin-top: 2cm;
+   margin-left: 1cm;
+   margin-bottom: 2cm;
+   margin-right: 1cm;
+  }
+</style>
+</head>
+<body class="body">
+  <div class="font-size-ajuste"><a id="aumentar-fonte" href="#" class="btn-font-size w-button">A+</a><a id="diminuir-fonte" href="#" class="btn-font-size w-button">A-</a></div>
+  <div data-collapse="all" data-animation="default" data-duration="450" class="nav-bar ghost-nav-bar w-nav">
+    <div class="navbar-wrapper"><a data-ix="logo" href="index.html" class="logo-link w-nav-brand"><img src="images/pg/unianchieta-logo-drop-shadow.png" height="40" srcset="images/pg/unianchieta-logo-drop-shadow-p-500.png 500w, images/pg/unianchieta-logo-drop-shadow-p-800.png 800w, images/pg/unianchieta-logo-drop-shadow.png 900w" sizes="(max-width: 479px) 57vw, 150px" alt="" class="logo"></a>
+      <div class="titulo-disciplina cor var-disciplina"></div>
+    </div>
+    <div class="w-embed">
+        <?xml version="1.0" encoding="utf-8"?>
+
+        <!-- LINK DOWNLOAD PDF -->
+        <form action="documents/unidade3.pdf" method="get" target="_blank">
+            <button style="background-color: transparent !important; padding-top: 15px;">
+                <svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30" height="30" viewbox="0 0 30.1 26.1" style="enable-background:new 0 0 30.1 26.1;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0 {fill: transparent;}
+                        .st1 {fill: #FFFFFF;}
+                    </style>
+                    <rect x="0" class="st0" width="30.1" height="26.1"></rect>
+                    <title>Fazer o download da Unidade 3</title>
+                    <g>
+                        <g id="Camada_1-2">
+                            <g id="Camada_1-2-2">
+                                <rect x="9.5" class="st1" width="11.2" height="4.1"></rect>
+                                <polygon class="st1" points="20.6,5.5 9.5,5.5 9.5,9.2 4.8,9.2 9.9,14.2 15.1,19.2 20.2,14.1 25.3,9.1 20.6,9.1 			">
+                                    <path class="st1" d="M26.3,17.7c0,3.8-0.6,4.7-4.2,4.7H7.9c-3.7,0-4.2-0.3-4.2-4.7v-1.7H0v4.4c0,3.1,2.5,5.5,5.5,5.5c0,0,0,0,0,0
+				h19c3.1,0,5.5-2.5,5.5-5.5c0,0,0,0,0,0v-4.5h-3.8V17.7z"></path>
+                                </polygon>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+        </form>
+    </div>
+    <div data-ix="menu-button" class="menu-button white-menu-button w-nav-button">
+        <div class="menu-icon">
+            <div class="menu-line menu-top-line"></div>
+            <div class="menu-line menu-middle-line-1"></div>
+            <div class="menu-line menu-middle-line-2"></div>
+            <div class="menu-line menu-bottom-line"></div>
+        </div>
+    </div>
+    <nav role="navigation" class="full-screen-menu w-nav-menu"><a href="#" data-ix="logo" class="logo-link full-screen-logo w-nav-brand"><img src="images/pg/unianchieta-logo-drop-shadow.png" width="125" srcset="images/pg/unianchieta-logo-drop-shadow-p-500.png 500w, images/pg/unianchieta-logo-drop-shadow-p-800.png 800w, images/pg/unianchieta-logo-drop-shadow.png 900w" sizes="100vw" alt="" class="logo"></a>
+        <div class="full-screen-menu-list">
+            <div class="links-menu w-row">
+                <div class="w-col w-col-4"></div>
+                <div class="w-col w-col-4">
+                    <div class="nav-bloco"><a href="index.html" class="titulos-nav-link w-nav-link">Início</a><a href="introducao.html" class="titulos-nav-link w-nav-link">Introdução</a><a href="unidade-1.html" class="titulos-nav-link var-unidade01 w-nav-link w--current"></a><a href="unidade-2.html" class="titulos-nav-link var-unidade02 w-nav-link"></a><a href="unidade-3.html" class="titulos-nav-link var-unidade03 w-nav-link"><a href="questoes-u1.html" class="titulos-nav-link w-nav-link"><strong>Atividades</strong></a><a href="referencias-uia1.html" class="titulos-nav-link w-nav-link"><strong>Referências</strong></a></div>
+                </div>
+                <div class="menu w-col w-col-4">
+                    <div class="nav-bloco"></div>
+                </div>
+            </div>
+            <div class="titulo-disciplina-nav var-disciplina"></div>
+        </div>
+    </nav>
+  </div>
+  <div class="header-capa-aula _3">
+      <div class="capa-unidade-container w-container">
+          <div class="capa-unidade-info">
+              <div data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a146" style="opacity:0;-webkit-transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="capa-unidade-numero">Unidade 3</div>
+              <div data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a148" style="-webkit-transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="linha-topo1"></div>
+              <h1 data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a149" style="opacity:0" class="capa-unidade-titulo var-unidade03"><br></h1>
+              <div data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a14b" style="-webkit-transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="linha-topo1"></div>
+          </div>
+      </div><a href="#introducao" class="w-inline-block"><img src="https://uploads-ssl.webflow.com/5b5e20e889ff9ca3a224d3a6/5b5ef9ec2461b3f88a5d28fe_slider-arrow-left-icon.svg" alt="Selecione a seta para iniciar o conteúdo" data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a14c" style="-webkit-transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);-moz-transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);-ms-transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);opacity:0;transform-style:preserve-3d" class="seta-topo"></a>
+  </div>
+  <div id="content" class="conteudo-geral">
+     
+     <!-- INICIO INTRODUCAO --> 
+     <section id="introducao" class="section-conteudo color">
+         <div class="container-conteudo w-container">
+             <div class="texto-box w-richtext">
+                
+                <h1 data-ix="fade-right">Introdução</h1>
+                 
+				<p>A Controladoria e o planejamento devem estar alinhados, pois um depende do outro. No entanto, existem formas diferentes de planejamento, e cada uma é determinante para uma situação específica dentro da empresa.</p>
+				<p>Além disso, o processo de Controladoria passa pela execução e pelo controle dos diversos setores da empresa, de forma que a análise de resultado é efetivada por meio de alguns índices de avaliação, como o EVA e o MVA.</p>
+				<p>Está preparado(a) para iniciar o estudo das funções da Controladoria e para conhecer os seus tipos de planejamento, a sua importância e a análise de resultados por meio do EVA e do MVA? Então, vamos iniciar nossa jornada!</p> 
+	
+
+                 
+				<h2 data-ix="fade-right">Objetivos específicos de aprendizagem</h2>
+
+				<ul>
+					<li>Estudar os tipos de planejamento;</li>
+					<li>Conhecer a importância dos tipos de planejamento;</li>
+					<li>Aprender os modelos de gestão e a análise de Controladoria.</li>
+				</ul>
+
+             </div>
+         </div>
+    </section>
+    <!-- FIM INTRODUCAO --> 
+    
+    <!-- INICIO SEÇÃO 1 --> 
+    <section class="section-conteudo">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+			
+                <h1 data-ix="fade-right">1 Planejamento estratégico, operacional</h1>
+				
+				<p>A Controladoria está interligada com todas as etapas do planejamento institucional, desde o início até o encerramento das atividades empresariais. Para isso, devemos conhecer cada etapa do planejamento, atribuindo medidas de controle específicas para cada etapa de gestão e de controle da organização.</p>
+				
+                <!-- INICIO FIGURA 1 -->
+				
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img3-1.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Fluxograma: controladoria x planejamento<br>Fonte: Elaborado pelo autor (2021). </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>A imagem representa um fluxograma com a importância do planejamento, com três retângulos, dois em cima e um embaixo, nos de cima, estão os dizeres: controladoria e planejamento, e no de baixo, sucesso empresarial.</div>
+                </div>
+				
+                <!-- FIM FIGURA 1 -->
+				
+                <p>De acordo com Pereira (2016), o planejamento contribui para a fixação dos objetivos da empresa, funcionando como uma ferramenta para entender a forma mais viável e eficaz de sucesso.</p>
+				<p>O planejamento é dividido de algumas formas, as quais acompanharão determinada etapa da empresa. Inicialmente, quando uma pessoa decide abrir uma empresa, deverá pensar em algumas condições, como a meta, o objetivo e a visão do empreendimento.</p>
+
+				
+                <!-- INICIO FIGURA 2 -->
+				
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img3-2.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Planejamento<br>Fonte: Plataforma Deduca (2021).  </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>A imagem representa braços de pessoas, as quais estão sentadas a uma mesa grande, algumas estão segurando caneta, outras, papel, outras, notebook, todos estão dispostos em círculo. </div>
+                </div>
+				
+                <!-- FIM FIGURA 2 -->
+
+                <p>O planejamento estratégico deve iniciar-se com a empresa, no momento da definição do ramo de atividade, da atuação, do porte e de todos os aspectos que levarão a empresa a ter sucesso.</p>
+				<p>Esse planejamento é definido como a elaboração das estratégias de funcionamento da instituição e deve ser constituído por metas e por objetivos que se pretende alcançar em logo prazo.</p>
+				<p>Segundo Pereira e Farias (2017), o planejamento estratégico segue alguns níveis. Inicialmente, devem ser definidos os parâmetros de competitividade da empresa. Nesse ponto, a empresa deverá, além de desenvolver estratégias para vencer a concorrência, buscar formas de implementá-las com sucesso. Ainda de acordo com Pereira e Farias (2017), algumas estratégias podem ser estabelecidas: sobrevivência, manutenção, crescimento e desenvolvimento.</p>
+
+				<!-- INICIO FIGURA 3 -->
+				
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img3-3.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Tipos de estratégia<br>Fonte: Elaborada pelo autor (2021).  </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>A imagem representa um esquema em retângulos, em cima, há a palavra estratégia, embaixo, em quatro retângulos alinhados, há as palavras: sobrevivência, manutenção, crescimento e desenvolvimento. </div>
+                </div>
+				
+                <!-- FIM FIGURA 3 -->
+				
+				<p>Cada tipo de estratégia estará relacionado com uma situação específica da empresa. Para conhecermos melhor cada tipo, analisaremos as suas descrições.</p>
+				
+				<!-- INICIO SANFONA SEM IMAGEM -->
+				
+                <div class="bg-infografico-un1 w-container">
+                    <p class="introinfografico"></p>
+                    <div class="div-block-15">
+                        <div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Sobrevivência</button>
+                            <div class="infoinfo">
+                                <p class="paragraph-5">Deve ser utilizado se não existirem outras alternativas, quando a empresa apresentar muitas dificuldades e/ou péssimas perspectivas. </p>
+                            </div>
+                        </div>
+                        <div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Manutenção</button>
+                            <div class="infoinfo">
+                                <p class="paragraph-5">É utilizado quando a empresa identifica um ambiente com ameaças, embora esteja forte no mercado e tenha recursos financeiros.</p>
+                            </div>
+                        </div>
+                        <div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Crescimento</button>
+                            <div class="infoinfo">
+                                <p class="paragraph-5">É o tipo de estratégia utilizado pelas empresas com situação favorável, como oportunidades de lançar novos produtos e de aumentar vendas. </p>
+                            </div>
+                        </div>
+                        <div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Desenvolvimento</button>
+                            <div class="infoinfo">
+                                <p class="paragraph-5">É o tipo de estratégia para quando a empresa apresentar, ao mesmo tempo, pontos fortes e oportunidades. Nesse momento, devem ser testadas novas tecnologias.</p>
+                            </div>
+                        </div>                      
+                    </div>
+                </div>
+				
+                <!-- FIM SANFONA SEM IMAGEM -->
+				
+				<p>Além dessa forma de planejamento, a empresa, após firmar as estratégias, deverá partir para o planejamento operacional, que é direcionado à operação das atividades – ou seja, à execução das metas em curto prazo.</p>
+				<p>O planejamento operacional abarcará os funcionários de setores importantes e com cargos de gerentes e de mentores, que definirão as formas de execução das ações.</p>
+				<p>O planejamento operacional é considerado de médio prazo e deve ser executado por funcionários que estejam dispostos a colocar em prática as metas da empresa. No entanto, nem sempre esses funcionários realizarão as tarefas que concretizarão tais metas.</p>
+
+				 <!-- início popup REFLITA / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+                <div class="popup reflita square" data-ix="fade-up-1" onclick="myFunction1()" >Reflita
+                    <span class="popuptext reflita text" id="myPopup1">
+                    <h3>Reflita</h3>
+                    <p>Em uma meta de aumento de vendas, qual seria o planejamento operacional que você, profissional atuante na empresa, realizaria?</p>
+                    </span>
+                </div>
+                <!-- fim popup REFLITA -->
+				
+				<p>As etapas de planejamento devem estar alinhadas com a Controladoria e devem contar com o engajamento de toda a equipe de trabalho, de modo que cada profissional terá um papel fundamental no momento de execução das ações, garantindo o sucesso da empresa. </p>
+				
+				
+                <h1 data-ix="fade-right">2 Execução e controle</h1>
+				
+				<p>Após serem realizadas as etapas de planejamento, começarão as etapas de execução e de controle das ações, que se diferenciam por ocorrer em momentos diferentes.</p>
+				<p>A execução é o momento que a equipe começa a realizar o que foi planejado, seja com ações de vendas, seja com o lançamento de um novo produto, seja, até mesmo, com demissões de funcionários, como poderia acontecer no caso de uma estratégia de sobrevivência da empresa.</p>
+
+				<!-- INICIO FIGURA 4 -->
+				
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img3-4.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Execução<br>Fonte: Plataforma Deduca (2021).  </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>A imagem representa um boneco saltando uma série de obstáculos. Em suas mãos, que estão posicionadas sobre a cabeça, há uma enorme lâmpada. </div>
+                </div>
+				
+                <!-- FIM FIGURA 4 -->
+				
+				<p>A execução estará alinhada com o planejamento tático, de maneira que as atividades serão planejadas para um período curto. Funcionários executores, como os vendedores, implementarão essas ações.</p>
+
+				<!-- início popup SAIBA MAIS / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+                <div class="popup saibamais square" data-ix="fade-up-1" onclick="myFunction2()" >Saiba Mais
+                    <span class="popuptext saibamais text" id="myPopup2">
+                    <h3>Saiba Mais</h3>
+                    <p>Para visualizarmos, na prática, a elaboração do planejamento de uma instituição, analisaremos o Planejamento Estratégico do Conselho Federal de Contabilidade. Clique <a href="https://cfc.org.br/oconselho/planejamento/" target="_blank">aqui!</a></p>
+                    </span>
+                </div>
+                <!-- fim popup SAIBA MAIS -->
+
+				<p>A etapa de controle é seguida da execução das atividades, em que os resultados alcançados serão avaliados por meio de índices e de relatórios. Assim, será possível definir se a empresa está ou não cumprindo os objetivos planejados</p>
+				
+				<!-- INICIO FIGURA 5 -->
+				
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img3-5.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Etapas da controladoria<br>Fonte: Elaborado pelo autor (2021).  </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>A imagem representa uma pirâmide invertida de retângulos, com as etapas da controladoria. No primeiro, há a palavra controladoria, no segundo, planejamento, no terceiro, execução e, no quarto, controle. </div>
+                </div>
+				
+                <!-- FIM FIGURA 5 -->
+
+				<p>Segundo Pereira (2016), existem algumas formas de controle da execução das metas da empresa. Algumas são indicadores, enquanto outras são relatórios e acompanhamentos diretos das ações.</p>
+				
+				<h1 data-ix="fade-right">3 Gestão e análise de resultados, EVA, MVA</h1>
+				
+				<p>A gestão da análise de resultados é um processo que pode ser realizado de várias formas e que está direcionado para o atendimento de uma finalidade específica dentro da empresa. Em algumas situações, o resultado pode ser alcançado por meio de análise de mercado, de consulta às demonstrações financeiras e pela entrada e saída de valores no caixa.</p>
+				<p>No entanto, algumas análises diferentes são obtidas por meio de índices, os quais expressam situações específicas do andamento e da situação financeira da empresa. Entre os índices acompanhados pelo <i>controller</i>, há o <i>Economic Value Added</i> (EVA), ou valor econômico agregado. Segundo Pereira e Farias (2017), essa ferramenta de gestão ganhou a aceitação de gestores, por ser uma forma eficiente de avaliar a performance da empresa.</p>
+	
+				<!-- INICIO FIGURA 6 -->
+				
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img3-6.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">EVA<br>Fonte: Plataforma Deduca (2021).  </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>A imagem representa o desenho de dois gráficos de barra com índices crescentes, há também algumas flechas apontado para cima, nas cores azul e rosa. </div>
+                </div>
+				
+                <!-- FIM FIGURA 6 -->
+	
+				<p>É importante destacar que a EVA não é apenas um programa de computador, mas, sim, um sistema que mede a situação financeira do empreendimento, verificando valores, auxiliando os gestores e definindo estratégias.<//p>
+				
+				<!-- início popup SAIBA MAIS / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+				
+                <div class="popup saibamais square" data-ix="fade-up-1" onclick="myFunction3()" >Saiba Mais
+                    <span class="popuptext saibamais text" id="myPopup3">
+                    <h3>Saiba Mais</h3>
+                    <p>O Conselho Regional de Contabilidade do Rio de Janeiro disponibilizou uma matéria sobre a análise dos balanços por meio de índices e de indicadores de desempenho. Vale a pena ler e estudar essa matéria! Clique <a href="http://www.crc.org.br/noticias/NoticiaIndividual/107903af-6b24-40c4-a49d-b2d744084921" target="_blank">aqui!</a></p>
+                    </span>
+                </div>
+				
+                <!-- fim popup SAIBA MAIS -->
+						
+				<p>De acordo com Pereira e Farias (2017, p. 157), o EVA é uma ferramenta que:</p>
+				<blockquote><i>"Ajusta o valor histórico contabilístico ao valor histórico econômico, acrescentando equivalente de capital, como as reservas por impostos diferidos, reservas de LIFO, amortizações acumuladas de Goodwill, Goodwill não reconhecido, reserva de cobrança duvidosa e reserva de garantia".</i></blockquote>
+				<p>Ao aplicar o índice EVA a uma empresa, automaticamente serão adicionados valores aos bens e aos serviços. No entanto, esses valores são definidos de maneira simples, considerando o seu valor absoluto – indicador de curto prazo que não supõe resultados de transações futuras.</p>
+				<p>Ao decidir aplicar o EVA, o profissional deve considerá-lo um instrumento complementar de gestão – ou seja, não pode tomá-lo como fator determinante, mas, sim, como um complemento das demais variáveis.</p>
+				<p>Uma maneira eficiente de utilizar o EVA é com a implantação de um mapa estratégico. A partir da visão geral da empresa, os gestores são capazes de acompanhar a criação de valor em relação a aspectos gerais, antecipando o momento em que apresentarão alguma defasagem.</p>
+				<p>Outro índice de avaliação de desempenho atrelado ao EVA é o <i>Market Value Added</i> (MVA), ou margem de valor agregado, que surgiu com o objetivo de corrigir algumas indeterminações do EVA. De acordo com Pereira e Farias (2017), a principal diferença entre os dois indicadores é que o EVA está baseado nas demonstrações financeiras: no balanço patrimonial, na demonstração de resultados e em outras demonstrações contábeis. Por sua vez, o MVA está baseado na expectativa de resultados futuros: é um índice de maior abrangência, uma vez que está voltado para a visão de mercado de capitais.</p>
+				<p>Para realizar o cálculo do MVA, devemos diminuir o valor de mercado pelo valor do capital investido na empresa.</p>
+
+				<!-- INICIO FIGURA 7 -->
+				
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img3-7.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">MVA<br>Fonte: Elaborado pelo autor (2021).  </div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>A imagem representa um esquema com três retângulos, um no centro, no qual há a palavra MVA; e os outros dois retângulos um pouco mais abaixo, nas laterais, com os dizeres valor de mercado e capital investido. </div>
+                </div>
+				
+                <!-- FIM FIGURA 7 -->
+
+				<p>Segundo Alves e Farias (2017), o MVA considera a riqueza em sentido monetário. Enquanto o EVA apresentar aspectos positivos, o MVA tenderá a aumentar.</p>
+				<p>Ainda de acordo com as autoras, para se obter uma eficiente definição dos indicadores de desempenho, devem ser levados em consideração alguns aspectos, como o método de coleta, o controle, as auditorias, a publicação e os planos de ações, buscando, sempre, aproximar a empresa dos objetivos preestabelecidos.</p>
+
+				<!-- início popup SAIBA MAIS / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+				
+                <div class="popup saibamais square" data-ix="fade-up-1" onclick="myFunction4()" >Saiba Mais
+                    <span class="popuptext saibamais text" id="myPopup4">
+                    <h3>Saiba Mais</h3>
+                    <p>O Conselho Regional de Contabilidade do Ceará disponibilizou um minicurso sobre ICMS Substituição Tributária. Entre os tópicos abordados, há o MVA. <a href="https://www.crc-ce.org.br/crcnovo/files/ICMS_ST2018.pdf" target="_blank">Clique aqui!</a></p>
+                    </span>
+                </div>
+				
+                <!-- fim popup SAIBA MAIS -->
+				
+				<p>É importante destacar que os índices serão destinados a um tipo de classe e se dividirão entre estratégicos, de produtividade, de qualidade e de capacidade. Cada um será acionado devido a uma necessidade específica da instituição.</p>
+				<p>Os indicadores estratégicos representarão as medidas relacionadas com as estratégias, com as metas e com os objetivos da empresa e avaliarão se atendem ao que foi planejado.</p>
+				<p>Os indicadores de produtividade ou eficiência avaliam a utilização dos recursos, enquanto os de qualidade ou eficácia avaliam o nível de aceitação do que foi produzido.</p> 
+				<p>O indicador de capacidade está relacionado à produção de um item pela unidade de tempo.</p>
+
+				
+
+               </div>
+            </div>
+    </section>
+ 
+      
+    <!-- INICIO CONSIDERAÇÕES FINAIS -->
+    <section class="section-conteudo color">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+			
+                <h1 data-ix="fade-right">Considerações Finais</h1>
+				
+                <p>A controladoria tem se tornado mais importante nas organizações financeiras, devendo estar atrelada a elas desde o momento em que suas atividades se iniciam, por meio das etapas de planejamento, de execução e de controle.</p>
+				<p>O planejamento deve se iniciar com a elaboração das estratégias a longo prazo, sendo definido como um planejamento estratégico. Em seguida, devem ser realizadas as operações e as atividades para alcançar as estratégias – ou seja, o planejamento operacional.</p>
+				<p>Por fim, após terem sido estabelecidas as operações da empresa, devem ser apontadas as tarefas que serão realizadas por meio do planejamento tático.</p>
+				<p>Depois das etapas de planejamento, o <i>controller</i> deve iniciar o processo de execução e de controle das atividades por meio de medidas de direcionamento da execução das ações.</p>
+				<p>Por fim, o processo de controle das atividades é realizado pela aplicação de índices de desempenho, como o EVA e o MVA, os quais atribuirão valores econômicos para os bens e para os serviços.</p>
+				<p>A atividade da Controladoria é uma busca de controle e de gestão da organização, utilizando estratégias que direcionarão os gestores, os empresários e os acionistas em todas as tomadas de decisão.</p>
+
+				
+		  </div>
+        </div>
+    </section>
+    <!-- FIM CONSIDERAÇÕES FINAIS -->
+
+                <!-- INICIO VIDEO DE RESUMO -->
+          
+    <section class="section-conteudo">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+                
+                <h1  data-ix="fade-right">Resumo da Unidade</h1>
+                
+                <p>Agora que você concluiu a leitura do conteúdo. assista a seguir a videoaula com o resumo da unidade:</p>
+                
+                <!-- INICIO VIDEO VIMEO -->
+                <div style="padding-top:56.27659574468085%" id="w-node-a02e1f5e1ea1-7b8600bf" class="w-video w-embed" data-ix="fade-left"><iframe class="embedly-embed" src="https://player.vimeo.com/video/551478761/" scrolling="no" title="Vimeo embed" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe></div>
+                <!-- FIM VIDEO VIMEO -->
+
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- INICIO ATIVIDADES UNIDADE 3 -->
+    <section class="section-conteudo color">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+			
+                <h1 data-ix="fade-right" class="atividade">Atividades Unidade III</h1>
+
+                <!-- Atividade 1 -->
+                <div class="questao-enunciado">
+                    <div class="questao-enunciado-texto w-richtext">
+                        <h2 data-ix="fade-right">Atividade 1</h2>
+                        <p>O planejamento estratégico é aquele voltado a longo prazo, que direciona a empresa nas metas e nos objetivos que deverão ser seguidos. Entre as estratégias, uma que é relacionada para quando a empresa estiver com muita dificuldade e com péssimas perspectivas, é a estratégia de:</p>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>a) Manutenção</i>.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as estratégias de: manutenção, crescimento e desenvolvimento não estão relacionadas a essa situação específica; e não existe estratégia de controle.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box correta">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>b)  Sobrevivência</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Correta:</strong> A alternativa marcada está correta porque a estratégia de sobrevivência é determinada para empresas que estejam passando por dificuldades financeiras e sem alternativas de melhoria. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>c)   Crescimento</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as estratégias de: manutenção, crescimento e desenvolvimento não estão relacionadas a essa situação específica; e não existe estratégia de controle.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>d)   Controle</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as estratégias de: manutenção, crescimento e desenvolvimento não estão relacionadas a essa situação específica; e não existe estratégia de controle.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>e)   Desenvolvimento</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as estratégias de: manutenção, crescimento e desenvolvimento não estão relacionadas a essa situação específica; e não existe estratégia de controle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- Atividade 2 -->
+            <div class="texto-box w-richtext">
+                <div class="questao-enunciado">
+                    <div class="questao-enunciado-texto w-richtext">
+                        <h2 data-ix="fade-right" class="atividade">Atividade 2</h2>
+                        <p>A estratégia deve estar alinhada com a realidade da empresa, para que possa realizar o planejamento de forma coesa com a situação que a instituição financeira está vivenciando. Quando a empresa apresente pontos fortes e oportunidades, deve ser realizada uma estratégia de:</p>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>a) Manutenção</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as estratégias de manutenção e sobrevivência não estão relacionadas a essa situação, e controle e direcionamento não são estratégias de planejamento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>b) Controle</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as estratégias de manutenção e sobrevivência não estão relacionadas a essa situação, e controle e direcionamento não são estratégias de planejamento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>c) Sobrevivência</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as estratégias de manutenção e sobrevivência não estão relacionadas a essa situação, e controle e direcionamento não são estratégias de planejamento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box correta">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>d) Desenvolvimento</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Correta:</strong> A alternativa marcada está correta porque a estratégia de desenvolvimento é aquela adotada quando a empresa está favorável no mercado, podendo ser apresentadas novas tecnologias e ferramentas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>e) Direcionamento</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as estratégias de manutenção e sobrevivência não estão relacionadas a essa situação, e controle e direcionamento não são estratégias de planejamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Atividade 3 -->
+            <div class="texto-box w-richtext">
+                <div class="questao-enunciado">
+                    <div class="questao-enunciado-texto w-richtext">
+                        <h2 data-ix="fade-right" class="atividade">Atividade 3</h2>
+                        <p>Indicadores de desempenho são aqueles que auxiliam os gestores no controle das atividades da empresa. Entre os indiciadores, um está relacionado à eficiência da empresa, ou seja, avalia a utilização dos recursos; estamos falando do indicador de:</p>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box correta">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>a) Produtividade</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Correta:</strong> A alternativa marcada está correta porque o indicador de produtividade é aquele direcionado a medir a eficiência da empresa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>b) Capacidade</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque os indicadores de capacidade, qualidade e estratégico não estão relacionados à eficiência, e o indicador de controle não é utilizado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>c) Qualidade</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque os indicadores de capacidade, qualidade e estratégico não estão relacionados à eficiência, e o indicador de controle não é utilizado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>d) Estratégico</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque os indicadores de capacidade, qualidade e estratégico não estão relacionados à eficiência, e o indicador de controle não é utilizado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>e) Controle</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque os indicadores de capacidade, qualidade e estratégico não estão relacionados à eficiência, e o indicador de controle não é utilizado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FIM ATIVIDADES UNIDADE 3 -->
+    
+  </div>
+  
+  <div class="proxima-unidade">
+    <div class="container-rodape w-container">
+      <div class="linha-topo1"></div>
+      <p class="secao-titulo-rodape">Unidade Concluída</p>
+      <p class="secao-descricao">Selecione o botão &quot;Avançar&quot; para continuar.</p><a href="referencias-uia1.html" class="botao-home avancar w-button">Avançar</a></div>
+  </div>
+  
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/unianchieta.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script>
+      $('.questao-alternativa-box').click(function() {
+          $(this).toggleClass('on');
+          $($(this).find('.questao-feedback')).toggleClass('on');
+          $('.questao-alternativa-box').removeClass('on');
+          $('.questao-feedback').removeClass('on');
+          $($(this).find('.questao-feedback')).addClass('on');
+          $(this).addClass('on');
+      });
+  </script>
+    <script>
+      // When the user clicks on div, open the popup
+      function myFunction1() {var popup = document.getElementById("myPopup1"); popup.classList.toggle("show");}
+      function myFunction2() {var popup = document.getElementById("myPopup2"); popup.classList.toggle("show");}
+      function myFunction3() {var popup = document.getElementById("myPopup3"); popup.classList.toggle("show");}
+      function myFunction4() {var popup = document.getElementById("myPopup4"); popup.classList.toggle("show");}
+      function myFunction5() {var popup = document.getElementById("myPopup5"); popup.classList.toggle("show");}
+      function myFunction6() {var popup = document.getElementById("myPopup6"); popup.classList.toggle("show");}
+      function myFunction7() {var popup = document.getElementById("myPopup7"); popup.classList.toggle("show");}
+      function myFunction8() {var popup = document.getElementById("myPopup8"); popup.classList.toggle("show");}
+      function myFunction9() {var popup = document.getElementById("myPopup9"); popup.classList.toggle("show");}
+      function myFunction10() {var popup = document.getElementById("myPopup10"); popup.classList.toggle("show");}
+      function myFunction11() {var popup = document.getElementById("myPopup11"); popup.classList.toggle("show");}
+      function myFunction12() {var popup = document.getElementById("myPopup12"); popup.classList.toggle("show");}
+      function myFunction13() {var popup = document.getElementById("myPopup13"); popup.classList.toggle("show");}
+      function myFunction14() {var popup = document.getElementById("myPopup14"); popup.classList.toggle("show");}
+      function myFunction15() {var popup = document.getElementById("myPopup15"); popup.classList.toggle("show");}
+      function myFunction16() {var popup = document.getElementById("myPopup16"); popup.classList.toggle("show");}
+  </script>
+</body>
+</html>

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<!--  Last Published: Tue Feb 04 2020 22:45:46 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5e396a4192a3a5237b8600bf" data-wf-site="5e396a4192a3a524468600b8">
+<head>
+  <meta charset="utf-8">
+  <title>Unidade 1</title>
+  <meta content="Unidade 1" property="og:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/components.css" rel="stylesheet" type="text/css">
+  <link href="css/unianchieta.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Oswald:200,300,400,500,600,700","Bitter:400,700,400italic","Merriweather:300,300italic,400,400italic,700,700italic,900,900italic","Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic","Roboto Slab:100,300,regular,700"]  }});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/pg/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/pg/webclip.png" rel="apple-touch-icon">
+  <meta name="author" content="">
+  <meta name="copyright" content="">
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+ tex2jax: {inlineMath: [['\\(','\\)']]},
+ menuSettings:{ zoom: "Hover"}
+});
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+ MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+   cancel: ["Extension","cancel"],
+   bcancel: ["Extension","cancel"],
+   xcancel: ["Extension","cancel"],
+   cancelto: ["Extension","cancel"]
+ });
+});
+</script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+      var $z = jQuery.noConflict();
+      $z(document).ready(function() {
+          $z("#aumentar-fonte").click(function() {
+              var size = $z("#content").css('font-size');
+              size = size.replace('px', '');
+              size = parseInt(size) + 2;
+              $z("#content").animate({
+                  'font-size': size + 'px'
+              });
+              return false;
+          });
+          $z("#diminuir-fonte").click(function() {
+              var size = $z("#content").css('font-size');
+              size = size.replace('px', '');
+              size = parseInt(size) - 2;
+              $z("#content").animate({
+                  'font-size': size + 'px'
+              });
+              return false;
+          });
+      });
+  </script>
+  <style>
+      
+/*cores das titulo-linha no richtext por unidade*/
+.texto-box.w-richtext>h1::before,
+.texto-box.unidade2.w-richtext>h2::before,
+.texto-box.unidade3.w-richtext>h2::before,
+.texto-box.unidade4.w-richtext>h2::before{
+  content:"";
+  display:flex;
+  width: 80px;
+  height: 3px;
+  max-width: 20%;
+  min-height: auto;
+  min-width: 80px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border-radius: 500px;
+  background-image: linear-gradient(45deg, #29a1c9 13%, #2a419a);
+}
+      
+/* estilo padrao das tabelas nos conteudos*/
+table {
+    width: 100%;
+}
+
+table,th,td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+}
+      
+th,td {
+    padding: 14px;
+    text-align: left;
+}
+th{
+    font-size: 1em;
+          
+      }
+      
+td {
+    font-weight: 400; 
+    vertical-align: top;
+    font-size: 0.9em;
+    text-align: justify;
+}
+      
+table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+      
+table tr:nth-child(odd) {
+    background-color: #eeeeee;
+}
+      
+table th {
+    background-color: #2a419a;
+    color: white;
+}
+      
+/* Esconder a tag <br> criada no cabeÃ§alho */
+h1.capa-aula-titulo > br{
+  display:none;
+}
+.texto-box.w-richtext figcaption>a {
+    color:#ffffff !important;
+  }
+      
+      
+        /* ------------------------------*/    
+        /*   NOMES DISCIPLINA/UNIDADES   */
+        /* ------------------------------*/
+      
+      
+  .var-titulo-introducao01::before,
+  .var-titulo-introducao02::before,
+  .var-titulo-introducao03::before,
+  .var-titulo-introducao04::before,
+  .var-disciplina::before {
+  content: "Controladoria";    /* NOME DA DISCIPLINA */
+  }
+  .var-titulo-introducao01::after,
+  .var-unidade01::after {
+  content: "Controladoria";    /* TITULO UNIDADE 1 */
+  } 
+  .var-titulo-introducao02::after,
+  .var-unidade02::after {
+	content: "Organização da Controladoria";
+  } 
+  .var-titulo-introducao03::after,
+  .var-unidade03::after {
+	content: "Funções da Controladoria";
+  } 
+
+      
+      
+      
+  body { -webkit-print-color-adjust: exact;}
+  @media print {
+    body {
+    padding:0;
+    line-height: 22px;
+    font-size: 18px;
+    }
+    .texto-box.w-richtext p {
+      font-size: 18px !important;
+      line-height: 22px;  
+    }
+    .nav-bar.ghost-nav-bar, .proxima-unidade, .rodape, .seta-topo {
+      display: none;
+    }
+    .section-conteudo, .section-conteudo.color {
+      background: none;
+      background-color: transparent;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    } 
+    .header-capa-aula {
+      min-height: 400px !important;
+      background-image: none !important;
+      background-color: #9e161d !important;
+    }
+    .page-break {
+      page-break-before: always; 
+    }
+    .legenda-imagem {
+     text-align: center; 
+    }
+    /* infograficos _________________________________________ */
+    .infografico-aviso {
+      display: block;
+      page-break-inside: avoid;
+    }
+    .infografico-box {
+     display: none; 
+    }
+     /* elementos de apoio - wrapper _________________________________________ */
+    .box-elemento {
+    	page-break-inside: avoid;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      box-shadow: none !important
+    }
+    /* elementos de apoio - section ________________________________________ */
+    .icone-caixa {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+}
+@page {
+   margin-top: 2cm;
+   margin-left: 1cm;
+   margin-bottom: 2cm;
+   margin-right: 1cm;
+  }
+</style>
+</head>
+
+<body class="body">
+  <div class="font-size-ajuste"><a id="aumentar-fonte" href="#" class="btn-font-size w-button">A+</a><a id="diminuir-fonte" href="#" class="btn-font-size w-button">A-</a></div>
+  <div data-collapse="all" data-animation="default" data-duration="450" class="nav-bar ghost-nav-bar w-nav">
+    <div class="navbar-wrapper"><a data-ix="logo" href="index.html" class="logo-link w-nav-brand"><img src="images/pg/unianchieta-logo-drop-shadow.png" height="40" srcset="images/pg/unianchieta-logo-drop-shadow-p-500.png 500w, images/pg/unianchieta-logo-drop-shadow-p-800.png 800w, images/pg/unianchieta-logo-drop-shadow.png 900w" sizes="(max-width: 479px) 57vw, 150px" alt="" class="logo"></a>
+      <div class="titulo-disciplina cor var-disciplina"></div>
+    </div>
+    <div class="w-embed">
+      <?xml version="1.0" encoding="utf-8"?>
+      
+      <!-- LINK DOWNLOAD PDF -->
+      <form action="documents/unidade1.pdf" method="get" target="_blank">
+          <button type="submit" style="background-color: transparent !important; padding-top: 15px;">
+              <svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30" height="30" viewbox="0 0 30.1 26.1" style="enable-background:new 0 0 30.1 26.1;" xml:space="preserve">
+                  <style type="text/css">
+                      .st0 {fill: transparent;}
+                      .st1 {fill: #FFFFFF;}
+                  </style>
+                  <rect x="0" class="st0" width="30.1" height="26.1"></rect>
+                  <title>Fazer o download da Unidade 1</title>
+                  <g>
+                      <g id="Camada_1-2">
+                          <g id="Camada_1-2-2">
+                              <rect x="9.5" class="st1" width="11.2" height="4.1"></rect>
+                              <polygon class="st1" points="20.6,5.5 9.5,5.5 9.5,9.2 4.8,9.2 9.9,14.2 15.1,19.2 20.2,14.1 25.3,9.1 20.6,9.1 			">
+                                  <path class="st1" d="M26.3,17.7c0,3.8-0.6,4.7-4.2,4.7H7.9c-3.7,0-4.2-0.3-4.2-4.7v-1.7H0v4.4c0,3.1,2.5,5.5,5.5,5.5c0,0,0,0,0,0
+                    h19c3.1,0,5.5-2.5,5.5-5.5c0,0,0,0,0,0v-4.5h-3.8V17.7z"></path>
+                              </polygon>
+                          </g>
+                      </g>
+                  </g>
+              </svg>
+          </button>
+      </form>
+    </div>
+    
+    <div data-ix="menu-button" class="menu-button white-menu-button w-nav-button">
+        <div class="menu-icon">
+            <div class="menu-line menu-top-line"></div>
+            <div class="menu-line menu-middle-line-1"></div>
+            <div class="menu-line menu-middle-line-2"></div>
+            <div class="menu-line menu-bottom-line"></div>
+        </div>
+    </div>
+    
+    <nav role="navigation" class="full-screen-menu w-nav-menu"><a href="#" data-ix="logo" class="logo-link full-screen-logo w-nav-brand"><img src="images/pg/unianchieta-logo-drop-shadow.png" width="125" srcset="images/pg/unianchieta-logo-drop-shadow-p-500.png 500w, images/pg/unianchieta-logo-drop-shadow-p-800.png 800w, images/pg/unianchieta-logo-drop-shadow.png 900w" sizes="100vw" alt="" class="logo"></a>
+        <div class="full-screen-menu-list">
+            <div class="links-menu w-row">
+                <div class="w-col w-col-4"></div>
+                <div class="w-col w-col-4">
+                    <div class="nav-bloco"><a href="index.html" class="titulos-nav-link w-nav-link">Início</a><a href="introducao.html" class="titulos-nav-link w-nav-link">Introdução</a><a href="unidade-1.html" class="titulos-nav-link var-unidade01 w-nav-link w--current"></a><a href="unidade-2.html" class="titulos-nav-link var-unidade02 w-nav-link"></a><a href="unidade-3.html" class="titulos-nav-link var-unidade03 w-nav-link"></a><a href="questoes-u1.html" class="titulos-nav-link w-nav-link"><strong>Atividades</strong></a><a href="referencias-uia1.html" class="titulos-nav-link w-nav-link"><strong>Referências</strong></a></div>
+                </div>
+                <div class="menu w-col w-col-4">
+                    <div class="nav-bloco"></div>
+                </div>
+            </div>
+            <div class="titulo-disciplina-nav var-disciplina"></div>
+        </div>
+    </nav>
+  </div>
+     
+      <div class="header-capa-aula _1">
+          <div class="capa-unidade-container w-container">
+              <div class="capa-unidade-info">
+                  <div data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a146" style="opacity:0;-webkit-transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -100PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="capa-unidade-numero">Unidade 1</div>
+                  <div data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a148" style="-webkit-transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;" class="linha-topo1"></div>
+                  <h1 data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a149" style="opacity:0" class="capa-unidade-titulo var-unidade01"><br></h1>
+                  <div data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a14b" style="-webkit-transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(300PX, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0;" class="linha-topo1"></div>
+              </div>
+          </div><a href="#introducao" class="w-inline-block"><img src="https://uploads-ssl.webflow.com/5b5e20e889ff9ca3a224d3a6/5b5ef9ec2461b3f88a5d28fe_slider-arrow-left-icon.svg" alt="Selecione a seta para iniciar o conteúdo" data-w-id="cef7f697-d402-9f7a-0c5c-130397d4a14c" style="-webkit-transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);-moz-transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);-ms-transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);transform:translate3d(0, -91PX, 0) scale3d(1, 1, 1) rotateX(0DEG) rotateY(0DEG) rotateZ(-92DEG) skew(0, 0);opacity:0;transform-style:preserve-3d" class="seta-topo"></a>
+      </div>
+      <div id="content" class="conteudo-geral">
+    
+     <!-- INICIO INTRODUCAO -->    
+     <section id="introducao" class="section-conteudo color">
+         <div class="container-conteudo w-container">
+             <div class="texto-box w-richtext">
+
+              
+                 <h1 data-ix="fade-right">Introdução</h1>
+                 
+					<p>Antes de iniciar nosso estudo sobre a Controladoria, você, estudante, é capaz de definir o que é o controle em uma empresa? Como e por quem pode ser executado?</p>
+					<p>Gerenciar uma empresa vai muito além de escriturar, de contabilizar e de elaborar as demonstrações contábeis, pois o processo de gestão exige planejamento eficiente, controle eficaz e apresentação precisa dos resultados, para que se possa avaliar o desempenho da empresa durante a execução de suas atividades.</p>
+					<p>A Controladoria surgiu com a função de auxiliar os gestores, os administradores e os contadores na execução e na gestão das atividades, com práticas que vão desde o momento inicial da abertura da empresa, com o seu planejamento, passando pelo seu funcionamento, até o momento de decisão de encerrar as atividades.</p>
+					<p>Está preparado(a) para iniciar o estudo da Controladoria e para conhecer o seu conceito, a sua origem e o seu papel dentro da instituição? Então, vamos iniciar a nossa jornada! Nesta unidade, você conhecerá a Controladoria</p>
+					<p>Seja bem-vindo(a) e bons estudos!</p>
+				 
+				 
+                 <h2 data-ix="fade-right">Objetivo específicos de aprendizagem</h2>
+
+					<ul>
+						<li>Aprender o conceito de Controladoria.</li>
+						<li>Conhecer a origem da Controladoria.</li>
+						<li>Descrever o papel da Controladoria.</li>
+					</ul>
+                 
+
+            </div>
+         </div>
+     </section>
+     <!-- FIM INTRODUCAO -->    
+    
+    <!-- INICIO CONTEUDO SEÇÃO 1 -->
+    <section class="section-conteudo">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+                <h1 data-ix="fade-right">1 Controladoria</h1>
+					<p>Ao decidir abrir uma empresa, os sócios deverão, inicialmente, realizar alguns planejamentos e responder a algumas perguntas sobre o ramo de atividade empresarial. Quantos funcionários contratará? Qual capital social será investido?</p>
+					<p>Além disso, ao começar as suas atividades, os gestores deverão atentar-se à compra de estoque, às estratégias de vendas, à análise de riscos e a outros indicadores importantes para a tomada de decisão</p>
+					<p>Esse processo de planejamento, de controle e de gestão de resultados é parte integrante da Controladoria. Segundo Pereira (2016), a Controladoria é responsável por coordenar a gestão financeira da empresa, tendo, como base, os parâmetros da Contabilidade e dos sistemas de informação.</p>
+					<p>A Controladoria está inserida no âmbito da Ciência Contábil e está relacionada, também, com as informações relacionadas ao passado, ao presente e ao futuro da organização. Além disso, integra-se com outros departamentos para promover a análise dos resultados econômicos e financeiros.</p>
+					
+							
+				<!-- INICIO FIGURA 1-->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-1.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Fluxograma - Controladoria<br>Fonte: Elaborada pelo autor (2021).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>fluxograma com as ramificações da Controladoria. No topo, um retângulo no qual está escrito “Controladoria”. Abaixo desse retângulo, há três outros, lado a lado. Da esquerda para a direita, o texto dentro deles é Contabilidade, Informações Passado/Presente/Futuro e Áreas econômicas/financeiras.</div>
+                </div>
+                <!-- FIM FIGURA 1 -->
+
+				<p>De acordo com Pereira e Farias (2017), a Controladoria pode ser dividida em duas partes. A primeira corresponde a um órgão administrativo, ao passo que a segunda corresponde a uma área do conhecimento humano e está interligada a outras ciências, como a Contabilidade, a Administração e a Economia.</p>
+
+				<!-- início popup REFLITA / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+                <div class="popup reflita square" data-ix="fade-up-1" onclick="myFunction1()" >Reflita
+                    <span class="popuptext reflita text" id="myPopup1">
+						<h3>Reflita</h3>
+							<p>Você, como profissional qualificado, é capaz de definir as funções da Controladoria em uma empresa?</p>
+                    </span>
+                </div>
+                <!-- fim popup REFLITA -->
+
+				<p>A <b>Controladoria ligada a um Órgão Administrativo</b> está relacionada à função de assegurar que a empresa continue operando no mercado – ou seja, está ligada ao princípio contábil da continuidade, que diz que uma empresa deverá ter duração indeterminada. Desse modo, seu papel é elaborar um planejamento e um controle das atividades da empresa, auxiliando em todos os momentos da decisão por parte dos gestores.</p>
+				<p>A <b>Controladoria relacionada à área de conhecimento humano</b> é mais abrangente e direciona o profissional aos métodos e aos princípios dessa ciência, além de interagir com os fundamentos de outras ciências sociais</p>
+				<p>A forma de atuação da Controladoria dentro das organizações não é fixa. Ao contrário, depende do tipo, das necessidades e das características da instituição. Por exemplo, para uma empresa cujo ramo de atividade é o de vendas, a estratégia da Controladoria será direcionada a essa área. Por sua vez, em empresas de prestação de serviço, serão utilizados outros métodos de gestão.</p>
+				
+
+				<!-- INICIO FIGURA 2-->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-2.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Controladoria<br>Fonte: Plataforma Deduca (2021).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>imagem representa, do tronco para baixo, uma pessoa sentada e com veste azul, segurando uma canetinha vermelha na mão direita, tendo a mão esquerda apoiada sobre a mesa. À sua frente, há um papel com gráfico de barras verticais.</div>
+                </div>
+                <!-- FIM FIGURA 2 -->
+
+				<p>Agora que já conhecemos um pouco da Controladoria, vamos aprender o seu conceito e entender sua delimitação e suas particularidades. Para isso, basta continuar a leitura!</p>
+				
+
+                <h2 data-ix="fade-right">1.1 Conceito </h2>
+
+				<p>Como podemos observar, a Controladoria é uma área abrangente e tem características e funções essenciais dentro de uma instituição financeira. A Controladoria pode ser definida como uma área que está inserida entre a gestão empresarial e as áreas de Contabilidade, de Administração e de Economia – ou seja, a Controladoria traduz os dados dessas áreas e os encaminha para o gestor da empresa, para os sócios e para os empresários.</p>
+				<p>Segundo Pereira (2016), a Controladoria utiliza técnicas gerenciais, sistemas de informação, demonstrações contábeis e relatórios; e realiza uma análise de mercado, transformando tudo em documentos que serão discutidos e estudados pelo presidente da instituição, para que, de posse dessas informações, possa tomar decisões confiáveis sobre o rumo da empresa.</p>
+						
+
+                <!-- INICIO FIGURA 3-->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-3.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Conceito de Controladoria<br>Fonte: Elaborada pelo autor (2021).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>fluxograma com o conceito de Controladoria. No topo, um retângulo no qual está escrito “Controladoria”. Abaixo desse retângulo, há três outros, lado a lado. Da esquerda para a direita, o texto dentro deles é Ciência, Sistemas de Informação e Técnicas Gerenciais.</div>
+                </div>
+                <!-- FIM FIGURA 3-->
+				
+				<p>De acordo com Pereira e Farias (2017), a Controladoria se divide em estratégica e de gestão.</p>
+				<p>A <b>Controladoria Estratégica</b> é aquela voltada a funções básicas de controle, como controle de clientes, de funcionários, de concorrentes, de investidores e de outros usuários que estão direta ou indiretamente envolvidos na empresa.</p>
+				<p>Por sua vez, a <b>Controladoria de Gestão</b> está direcionada à continuidade da empresa e é desenvolvida por um profissional definido: o <i>controller</i>.
+				
+				<!-- início popup SAIBA MAIS / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+                <div class="popup saibamais square" data-ix="fade-up-1" onclick="myFunction2()" >Saiba Mais
+                    <span class="popuptext saibamais text" id="myPopup2">
+						<h3>Saiba Mais</h3>
+							<p>Para saber mais sobre a Controladoria, sobre a gestão econômica e sobre a gestão pública, conheça a Comissão de Estudos em Controladoria, criada pelo Conselho Regional de Contabilidade do Rio Grande do Sul! Clique <a href="http://www.crcrs.org.br/comissao-de-estudos-em-controladoria-do-crcrs/" target="_blank">aqui!</a></p>
+                    </span>
+                </div>
+                <!-- fim popup SAIBA MAIS -->
+				
+				<p>A controladoria relacionada à estratégia tem, como área de atuação, o cenário da empresa e o perfil do <i>controller</i>, sendo direcionados à atenção dos credores, a planejamentos de longo prazo, ao controle das informações e à análise de mercado.</p>
+				
+				<!-- INICIO FIGURA 4-->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-4.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Controladoria x Gestão<br>Fonte: Plataforma Deduca (2021).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>imagem representa uma tela, atrás da qual está um homem, porém sendo observado de frente. Na tela há vários cadeados fechados, o homem toca um e este se abre.</div>
+                </div>
+                <!-- FIM FIGURA 4-->
+				
+				<p>É notória a importância da Controladoria dentro das instituições. Quanto maior for o ambiente empresarial, maior é a necessidade dessa área de atuação, visto que os processos se tornam mais complexos e interligados a outros subsetores. No entanto, a atuação dentro de instituições de pequeno porte também é necessária, pois, por intermédio de estratégias de controle, pode-se realizar medidas de crescimento e de desenvolvimento no mercado.</p>
+				<p>No próximo tópico, vamos aprender a origem da Controladoria. Vamos lá?</p>
+				
+				<h2 data-ix="fade-right">1.2 Origem </h2>
+				
+				<p>Como vimos até o momento, a função da Controladoria é importante. No entanto, quando começou a existir, de fato, esse tipo de controle dentro das instituições financeiras?</p>
+				<p>De acordo com Pereira (2016), a Controladoria surgiu, inicialmente, nos Estados Unidos, logo no início do século XX, e tinha o objetivo de dar um suporte às empresas, que começavam a crescer e a se desenvolver de forma rápida.</p>
+				<p>Também no início desse século, foram acontecendo números maiores de fusões e incorporações de empresas, o que provocou o chamado conglomerado econômico.</p>
+				<p>Diante desse cenário repleto de mudanças e de complexidade, a Controladoria surgiu para dar um suporte maior e um controle melhor do que era realizado dentro das instituições.</p>
+				<p>Com o passar dos anos, esse sistema de controle foi se espalhando pelos países e chegou ao Brasil. O processo de implantação da controladoria no Brasil, inicialmente, começou a surgir com a instalação de multinacionais no país.</p>
+				<p>Essas empresas, ao se instalarem, trouxeram a prática que já vinha acontecendo em seus países, sendo esta pouco a pouco expandida para outras empresas, até o momento em que passou a ser implantada, de forma definitiva, no Brasil.</p>
+				
+				
+				<!-- INICIO FIGURA 5-->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-5.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Origem da Controladoria<br>Fonte: Elaborada pelo autor (2021).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>fluxograma com as origens da Controladoria. No topo, um retângulo no qual está escrito “Controladoria”. Abaixo desse retângulo, há três outros, lado a lado. Da esquerda para a direita, o texto dentro deles é Século XX, Estados Unidos e Multinacionais no Brasil.</div>
+                </div>
+                <!-- FIM FIGURA 5-->
+
+				<p>Outro marco importante do surgimento da Controladoria nas organizações foram os escândalos relacionados à contabilidade das grandes empresas no início dos anos 2000, nos Estados Unidos.</p>
+				<p>Nesse momento, foram implementadas as leis relacionadas à convergência das práticas contábeis internacionais, visando uniformizar os relatórios e integralizar as práticas.</p>
+				
+				
+				<!-- INICIO FIGURA 6-->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-6.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Investimentos<br>Fonte: Plataforma Deduca (2021).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>imagem representa as silhuetas de várias pessoas se cumprimentando. Sobre elas, há balões de fala</div>
+                </div>
+                <!-- FIM FIGURA 6-->
+
+				<p>Assim que surgiu a Controladoria nas empresas, sua função não era tão completa quanto o é atualmente. Inicialmente, após o seu surgimento, a controladoria era uma unidade administrativa.</p>
+				<p>No entanto, após o passar dos anos, tornou-se uma parte independente, atuando diretamente com outras áreas e com sistemas de informação capazes de definir modelos de gestão nas empresas.</p>
+				<p>Segundo Pereira e Farias (2017), com a globalização, os novos modelos gerenciais e a expansão dos princípios contábeis fizeram com que a Controladoria se desenvolvesse com base em alguns eixos.</p>
+				<p>O eixo inicial da prática é o do <b>valor</b>, o qual está direcionado ao novo entendimento que as organizações financeiras têm em relação às suas práticas e aos seus objetivos. Acompanhe, a seguir, alguns dos outros eixos.</p>
+
+				<!-- INICIO SANFONA SEM IMAGEM -->
+					<div class="bg-infografico-un1 w-container">
+                        <p class="introinfografico"></p>
+						<div class="div-block-15">
+						
+							<div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Eixo dos processos:</button>
+								<div class="infoinfo">
+									<p class="paragraph-5">Visa construir uma visão realista dos recursos e dos valores gerados pelos custos.</p>
+								</div>
+							</div>
+							
+							<div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Eixo dos insumos:</button>
+								<div class="infoinfo">
+									<p class="paragraph-5">Relaciona-se com a mobilização dos recursos disponíveis na empresa</p>
+								</div>
+							</div>
+							
+							<div class="div-block-8"><button class="buttoninfografico"><img src="images/pg/arrowdown.png" width="16" style="padding-right: 10px;">Eixo Estratégico:</button>
+								<div class="infoinfo">
+									<p class="paragraph-5">Procura caminhos para visualizar e para redefinir os resultados presentes e futuros das empresas.</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+                <!-- FIM SANFONA SEM IMAGEM -->
+
+
+				<p>Por fim, temos o eixo da mensuração e da comunicação, que está relacionado, de acordo com Pereira e Farias (2017), à</p>
+				
+				<blockquote><i>Constituição propriamente dita do quadro geral do desempenho empresarial. Este deve incorporar e integrar os levantamentos e as medidas de diferentes naturezas financeira e não financeiras, que são obtidas com a operação dos eixos. Deve também apresentar os resultados através de análises, propostas e relatórios, que sejam consistentes com as condições ambientais, o quadro interno de processos e recursos, e a natureza das decisões a serem tomadas. (PEREIRA; FARIAS, 2017, p. 18)</i></blockquote>
+
+				<p>A mensuração e a comunicação buscam ser mais abrangentes, incorporando-se a aspectos financeiros ligados à contabilidade e à economia, e a aspectos não financeiros dos sistemas de gestão, da administração e do planejamento.</p>
+				<p>Em síntese, a Controladoria surgiu como uma ferramenta de controle em meio a uma crise de informações não confiáveis emitidas por relatórios contábeis viciosos, no início dos anos 2000. A partir desse pressuposto de controlar e de gerenciar os dados, a Controladoria se espalhou pelos Estados Unidos e logo ganhou o mundo</p>
+				<p>Agora que já conhecemos como a Controladoria surgiu, vamos entender o seu papel em uma instituição financeira.</p>
+				
+				<h2 data-ix="fade-right">1.3 Papel da Controladoria </h2>		
+
+				<p>A Controladoria tem uma função importante dentro das empresas. No entanto, delimitar seus objetivos é uma tarefa complexa, pois são bem variados e abrangentes, embora estejam, sempre, ligados à missão da empresa</p>
+				
+				<!-- INICIO FIGURA 7-->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-7.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Objetivos da Controladoria<br>Fonte: Plataforma Deduca (2021).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>na imagem, uma pessoa explica um quadro com gráficos, enquanto outras, sentadas com computadores, observam.</div>
+                </div>
+                <!-- FIM FIGURA 7-->
+			
+				<p>Tendo em mente que a Controladoria está interligada com a missão e com os valores da empresa, podemos determinar o seu papel, de acordo com Pereira (2016), como a possibilidade de promover a eficácia da empresa, a viabilização do controle econômico e a integração das áreas de responsabilidade.</p>
+				<p>Alguns fatores interferem no desenvolvimento dos objetivos traçados pela Controlaria, como é o caso de um ambiente empresarial desorganizado, sem áreas definidas de atuação, sem controle financeiro de gestão de recursos e com uma expectativa grande relacionada aos resultados esperados pela gestão do controle.</p>
+				<p>Por isso, para cumprimento dos objetivos da Controladoria, a empresa precisa passar por um processo de organização e de planejamento operacional, que deve ser realizado com todos os gestores e com todos os responsáveis de cada setor</p>
+				
+				
+				<!-- início popup SAIBA MAIS / alterar numeração sequencialmente no MyFunctionX e o myPopupX / iniciar do "1" em cada unidade -->
+                <div class="popup saibamais square" data-ix="fade-up-1" onclick="myFunction3()" >Saiba Mais
+                    <span class="popuptext saibamais text" id="myPopup3">
+						<h3>Saiba Mais</h3>
+							<p>Para saber mais sobre os objetivos da Controladoria, basta analisar o trabalho “Comparativo da teoria da controladoria com a abordagem adotada em artigos de revista e na pós-graduação em controladoria da Universidade de Passo Fundo”, publicado pelo CRC do Rio Grande do Sul. Acesse-o <a href="http://www.crcrs.org.br/convencao/arquivos/trabalhos/cientificos/comparativo_teoria_controladoria_artigos_revista_809.pdf" target="_blank">aqui!</a></p>
+                    </span>
+                </div>
+                <!-- fim popup SAIBA MAIS -->
+				
+				<p>Segundo Alves e Farias (2017), os objetivos da Controladoria são alcançados por meio de ferramentas de gestão, como os indicadores de desempenho, a estrutura BSC e a mensuração dos custos e dos benefícios.</p>
+				<p>Os indicadores de desempenho estão relacionados aos objetivos da controladoria: apresentação dos resultados, análise das demonstrações contábeis, estratégias de investimentos e aplicação.</p>
+				<p>A estrutura BSC (<i>Balanced Scorecard</i>) diz respeito aos objetivos de tomadas de decisão por parte dos gestores. Por meio dessa ferramenta, as empresas aprimoram seus negócios, monitorando os custos e gerando um aumento de lucro.</p>
+				<p>Já a mensuração dos custos e dos benefícios está voltada ao momento em que a empresa realiza um planejamento do que está sendo investido e do que está sendo obtido com esse investimento – ou seja, qual é o valor gerado pelos investimentos, se são viáveis e se devem continuar em operação.</p>
+				
+				
+				<!-- INICIO FIGURA 8-->
+                <div class="caixa-imagem w-inline-block">
+                    <div class="bloco-thumblr" data-ix="fade-left"><img src="images/img1-8.jpg" class="imagem-scale"></div>
+                    <div class="legenda-imagem" data-ix="fade-right">Ferramentas da Controladoria<br>Fonte: Plataforma Deduca (2021).</div>
+                    <div class="legenda-imagem-ver" data-ix="fade-right">#PraCegoVer<br>na imagem, um homem lida com gráficos.</div>
+                </div>
+                <!-- FIM FIGURA 8-->
+				
+				<p>Por fim, podemos destacar que a Controladoria apresenta objetivos diversos e específicos em cada instituição, sendo utilizados alguns métodos que atendem a essas demandas, com os objetivos de aumentar a lucratividade e de reduzir os custos para tornar a empresa mais competitiva.</p>
+						
+						
+			</div>
+		</div>
+	</section>	
+						
+     
+    <!-- INICIO CONSIDERAÇÕES FINAIS -->
+    <section class="section-conteudo color">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+                
+                <h1  data-ix="fade-right">Considerações Finais</h1>
+				
+				<p>Gerir, controlar e definir estratégias para o bom desempenho de uma empresa tem se tornado um diferencial importante. Com esses métodos de planejamento, as empresas conseguem driblar a concorrência e se destacar no mercado financeiro</p>		
+				<p>A partir desse cenário de aumento da concorrência e de competitividade entre as empresas, a Controladoria tem sido uma importante aliada, com suas estratégias de gestão, de controle e de direcionamento dos gestores sobre as tomadas de decisão</p>
+				<p>Em síntese, nesta unidade, vimos que a Controladoria apresenta estratégias de gestão e de controle que auxiliam o desenvolvimento das atividades empresariais e que estão voltadas à missão da empresa.</p>
+				<p>A controladoria surgiu, no início do século XX, como uma aliada da Contabilidade e da Administração, por meio da análise, da avaliação e dos direcionamentos das demonstrações contábeis.</p>
+				<p>O papel da Controladoria na organização está relacionado ao modelo de gestão, à apresentação de resultados, às análises de custos e ao direcionamento nas decisões tomadas em relação a investimentos, a cortes de gastos, à lucratividade e à continuidade das atividades operacionais.</p>			
+			
+			</div>
+        </div>
+    </section>
+    <!-- FIM CONSIDERAÇÕES FINAIS -->
+
+
+            <!-- INICIO VIDEO DE RESUMO -->
+          
+    <section class="section-conteudo">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+                
+                <h1  data-ix="fade-right">Resumo da Unidade</h1>
+                
+                <p>Agora que você concluiu a leitura do conteúdo. assista a seguir a videoaula com o resumo da unidade:</p>
+                
+                <!-- INICIO VIDEO VIMEO -->
+                <div style="padding-top:56.27659574468085%" id="w-node-a02e1f5e1ea1-7b8600bf" class="w-video w-embed" data-ix="fade-left"><iframe class="embedly-embed" src="https://player.vimeo.com/video/551478691" scrolling="no" title="Vimeo embed" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe></div>
+                <!-- FIM VIDEO VIMEO -->
+
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- INICIO ATIVIDADES UNIDADE 1 -->
+    <section class="section-conteudo color">
+        <div class="container-conteudo w-container">
+            <div class="texto-box w-richtext">
+                <h1 data-ix="fade-right" >Atividades Unidade I</h1>
+
+                <!-- Atividade 1 -->
+                <div class="questao-enunciado">
+                    <div class="questao-enunciado-texto w-richtext">
+                        <h2 data-ix="fade-right" class="atividade">Atividade 1</h2>
+                        <p>A Controladoria está relacionada a várias áreas de atuação de uma empresa, indo desde a gestão de vendas, a contratação de funcionários, a análise de custos até a análise do ambiente externo. Podemos afirmar que a Controladoria está relacionada diretamente a quais áreas?</p>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>a) Direito e Meio ambiente</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as áreas meio ambiente, saúde, pedagogia e sociologia não estão diretamente relacionadas à Controladoria dentro de uma organização financeira.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box correta">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>b) Contabilidade e Administração</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Correta:</strong> A alternativa marcada está correta porque as ciências sociais estão diretamente interligadas à Controladoria, em especial a Contabilidade, por meio da elaboração das demonstrações, e a Administração, por meio do auxílio do processo de planejamento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>c) Saúde e Fiscal</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as áreas meio ambiente, saúde, pedagogia e sociologia não estão diretamente relacionadas à Controladoria dentro de uma organização financeira</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>d) Pedagógica e Econômica.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as áreas meio ambiente, saúde, pedagogia e sociologia não estão diretamente relacionadas à Controladoria dentro de uma organização financeira</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>e) Mercantil e Sociológica</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque as áreas meio ambiente, saúde, pedagogia e sociologia não estão diretamente relacionadas à Controladoria dentro de uma organização financeira</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Atividade 2 -->
+            <div class="texto-box w-richtext">
+                <div class="questao-enunciado">
+                    <div class="questao-enunciado-texto w-richtext">
+                        <h2 data-ix="fade-right" class="atividade">Atividade 2</h2>
+                        <p>Para poder realizar um processo de controle efetivo dentro da organização, o profissional deve estar integrado com as demais áreas. Além disso, deve buscar informações sobre a missão, os valores e a visão da empresa. Que outras informações são importantes?</p>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>a) Econômicas e sociais</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque os aspectos sociais, éticos e contratuais não são fatores essenciais para a análise da gestão e para a realização da controladoria na empresa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>b) Financeiras e éticas.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque os aspectos sociais, éticos e contratuais não são fatores essenciais para a análise da gestão e para a realização da controladoria na empresa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>c)  Econômicas e contratuais.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque os aspectos sociais, éticos e contratuais não são fatores essenciais para a análise da gestão e para a realização da controladoria na empresa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box correta">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>d) Econômicas e financeiras.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Correta:</strong> A alternativa marcada está correta porque para realizar um controle eficiente na empresa, o profissional deve avaliar os aspectos econômicos e financeiros, além dos relatórios e dos pareceres técnicos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>e) Contratuais e éticas.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque os aspectos sociais, éticos e contratuais não são fatores essenciais para a análise da gestão e para a realização da controladoria na empresa.</p>
+                        </div>
+                    </div>
+                </div>
+                            <!-- Atividade 3 -->
+            <div class="texto-box w-richtext">
+                <div class="questao-enunciado">
+                    <div class="questao-enunciado-texto w-richtext">
+                        <h2 data-ix="fade-right" class="atividade">Atividade 3</h2>
+                        <p>A Controladoria é um ramo relativamente novo e vem tomando espaço dentro das empresas, devido ao aumento da competitividade de mercado, à complexidade das relações empresariais e a outros fatores importantes. A Controladoria voltada para um órgão meramente administrativo está relacionada a qual princípio contábil?</p>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>a) Equidade.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque equidade, legalidade, amortização e publicidade não são princípios da contabilidade e não estão ligados à controladoria.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>b) Legalidade.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque equidade, legalidade, amortização e publicidade não são princípios da contabilidade e não estão ligados à controladoria.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>c) Amortização.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque equidade, legalidade, amortização e publicidade não são princípios da contabilidade e não estão ligados à controladoria.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box correta">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>d) Continuidade.</p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Correta:</strong> A alternativa marcada está correta porque a controladoria, como órgão administrativo, diz respeito a montar estratégias para que a empresa continue operando – ou seja, para que a empresa mantenha sua atividade financeira –, atendendo ao princípio da continuidade.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="questao-alternativa-box">
+                    <div class="questao-alternativa">
+                        <div class="questao-alternativa-check"></div>
+                        <div class="questao-alternativa-texto w-richtext">
+                            <p>e) Publicidade. </p>
+                        </div>
+                    </div>
+                    <div class="questao-feedback">
+                        <div class="questao-feedback-texto w-richtext">
+                            <p><strong>Incorreta:</strong> A alternativa marcada está incorreta porque equidade, legalidade, amortização e publicidade não são princípios da contabilidade e não estão ligados à controladoria.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FIM ATIVIDADES UNIDADE 1 -->
+    
+  </div>
+  
+  <div class="proxima-unidade">
+    <div class="container-rodape w-container">
+      <div class="linha-topo1"></div>
+      <p class="secao-titulo-rodape">Unidade Concluída</p>
+      <p class="secao-descricao">Selecione o botão &quot;Avançar&quot; para continuar.</p><a href="unidade-2.html" class="botao-home avancar w-button">Avançar</a></div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/unianchieta.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script>
+      $('.questao-alternativa-box').click(function() {
+          $(this).toggleClass('on');
+          $($(this).find('.questao-feedback')).toggleClass('on');
+          $('.questao-alternativa-box').removeClass('on');
+          $('.questao-feedback').removeClass('on');
+          $($(this).find('.questao-feedback')).addClass('on');
+          $(this).addClass('on');
+      });
+  </script>
+  <script>
+      // When the user clicks on div, open the popup
+      function myFunction1() {var popup = document.getElementById("myPopup1"); popup.classList.toggle("show");}
+      function myFunction2() {var popup = document.getElementById("myPopup2"); popup.classList.toggle("show");}
+      function myFunction3() {var popup = document.getElementById("myPopup3"); popup.classList.toggle("show");}
+      function myFunction4() {var popup = document.getElementById("myPopup4"); popup.classList.toggle("show");}
+      function myFunction5() {var popup = document.getElementById("myPopup5"); popup.classList.toggle("show");}
+      function myFunction6() {var popup = document.getElementById("myPopup6"); popup.classList.toggle("show");}
+      function myFunction7() {var popup = document.getElementById("myPopup7"); popup.classList.toggle("show");}
+      function myFunction8() {var popup = document.getElementById("myPopup8"); popup.classList.toggle("show");}
+      function myFunction9() {var popup = document.getElementById("myPopup9"); popup.classList.toggle("show");}
+      function myFunction10() {var popup = document.getElementById("myPopup10"); popup.classList.toggle("show");}
+      function myFunction11() {var popup = document.getElementById("myPopup11"); popup.classList.toggle("show");}
+      function myFunction12() {var popup = document.getElementById("myPopup12"); popup.classList.toggle("show");}
+      function myFunction13() {var popup = document.getElementById("myPopup13"); popup.classList.toggle("show");}
+      function myFunction14() {var popup = document.getElementById("myPopup14"); popup.classList.toggle("show");}
+      function myFunction15() {var popup = document.getElementById("myPopup15"); popup.classList.toggle("show");}
+      function myFunction16() {var popup = document.getElementById("myPopup16"); popup.classList.toggle("show");}
+  </script>
+</body>
+</html>
